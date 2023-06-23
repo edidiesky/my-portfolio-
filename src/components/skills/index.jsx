@@ -1,23 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { BiChevronRight } from "react-icons/bi";
 
-const Skills = [
-  "https://v1.brittanychiang.com/img/skills/html.png",
-  "https://v1.brittanychiang.com/img/skills/css.png",
-  "https://v1.brittanychiang.com/img/skills/js.png",
-  "https://v1.brittanychiang.com/img/skills/node.png",
-  "https://v1.brittanychiang.com/img/skills/mongodb.png",
-  "https://v1.brittanychiang.com/img/skills/github.png ",
-  "./tech/redux.png",
-  "https://v1.brittanychiang.com/img/skills/js.png",
-  "https://v1.brittanychiang.com/img/skills/linux.png",
-  "./tech/nodejs.png",
-  "./tech/reactjs.png",
-  "./tech/typescript.png",
-  "./tech/tailwind.png",
-  "./tech/git.png",
-];
 
 const newskills = [
   "Reactjs",
@@ -32,9 +15,6 @@ const newskills = [
   "Redux",
 ];
 
-const tools = ["Command Line", "Post Man", "Git + Github", "Chrome DevTools"];
-
-const tools2 = ["Redux", "Redux Dev tool", "Context Api"];
 
 export default function SkillsIndex() {
   const SkillsLeft = () => {
@@ -60,7 +40,7 @@ export default function SkillsIndex() {
                 return (
                   <div
                     className="w-100 card family1 text-grey uppercase"
-                    key={x.id}
+                    key={index}
                     data-aos="fade-up"
                     data-aos-duration="1000"
                     data-aos-delay={index * 250}
@@ -93,9 +73,10 @@ const SkillsWrapper = styled.div`
   place-items: center;
   background-color: #fff;
   background-color: #151315;
+  /* z-index: 200000; */
 
   .grid-auto {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 4rem;
     @media (max-width: 980px) {
       grid-template-columns: repeat(auto-fit, minmax(auto, 1fr));
@@ -151,6 +132,7 @@ const SkillsWrapper = styled.div`
     letter-spacing: 3px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     font-size: 12px;
+    /* background-color: red; */
     @media (max-width: 780px) {
       width: 18rem;
       height: 18rem;

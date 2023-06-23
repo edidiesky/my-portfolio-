@@ -67,6 +67,14 @@ export default function App() {
   //     once: true,
   //   });
   // }, [setCount, count]);
+
+  useEffect(() => {
+
+
+    AOS.init({
+      once: true,
+    });
+  }, []);
   const [height, setHeight] = useState(0);
 
   return (

@@ -569,7 +569,7 @@ a:hover {
   }
 
   .w-85 {
-    width: 90%;
+    width: 75%;
   }
 }
 
@@ -602,7 +602,7 @@ a:hover {
     font-size: 12px;
   }
   .fs-60 {
-    font-size: 35px;
+    font-size: 45px;
   }
 
   .fs-16 {
@@ -634,6 +634,6 @@ a:hover {
     font-size: 37px;
   }
   .fs-60 {
-    font-size: 30px;
+    font-size: 40px;
   }
 }
