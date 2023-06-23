@@ -76,7 +76,7 @@ const SkillsWrapper = styled.div`
   /* z-index: 200000; */
 
   .grid-auto {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     grid-gap: 4rem;
     @media (max-width: 980px) {
       grid-template-columns: repeat(auto-fit, minmax(auto, 1fr));
@@ -132,7 +132,6 @@ const SkillsWrapper = styled.div`
     letter-spacing: 3px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     font-size: 12px;
-    /* background-color: red; */
     @media (max-width: 780px) {
       width: 18rem;
       height: 18rem;
