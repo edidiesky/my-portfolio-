@@ -7,6 +7,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import "animate.css";
 import { Layout } from "./screens";
+import Cursor from "./components/common/cursor";
 
 export default function App() {
   const [count, setCount] = useState(0);
@@ -79,6 +80,7 @@ export default function App() {
 
   return (
     <div className="based" style={{ height }}>
+      <Cursor/>
       {/* <h1 ref={counterref} className="counter text-white">
         {count}
       </h1>

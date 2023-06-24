@@ -14,6 +14,7 @@ import Message from "../components/loaders/Message";
 import HeroIndex from "../components/hero";
 import AboutMeIndex from "../components/aboutme";
 import { Footer } from "../components/common";
+import WorkIndex from "../components/work";
 const LayoutWrapper = styled.div`
   width: 100%;
   display: flex;
@@ -87,11 +88,9 @@ export default function Layout() {
           <HeroIndex />
           <AboutMeIndex/>
           <AboutIndex />
+          <WorkIndex />
           <SkillsIndex />
-          {/* <AboutIndex />
-          <SkillsIndex />
-          <Work />
-          <Contactindex /> */}
+          
           <Footer/>
         </div>
       </div>

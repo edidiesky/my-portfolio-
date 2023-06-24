@@ -7,6 +7,21 @@
   text-decoration: none;
   list-style: none;
 }
+.line {
+  position: relative;
+}
+
+.line .span {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(13, 13, 13);
+  opacity: .9;
+  z-index: 4;
+  background-blend-mode: screen;
+}
 .target {
   font-kerning: none;
 }

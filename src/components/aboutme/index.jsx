@@ -3,25 +3,30 @@ import styled from "styled-components";
 import { Head } from "../common";
 import Input from "../forms/Input";
 import { BiChevronRight } from "react-icons/bi";
+import TextIndex from "../common/Text";
 
 export default function AboutMeIndex() {
   return (
     <SkillsWrapper id="about">
       <div className="imageWrapper"></div>
       <div className="imagegradient"></div>
-      <div className="left w-85 auto h-100 flex column gap-1">
+      <div className="left w-85 auto h-100 flex column gap-2">
         <div className="w-100">
           <h4
             style={{ fontWeight: "normal" }}
-            className=" text-white text-start"
+            className="text-grey family1 text-start flex item-center gap-2"
           >
+            <img
+              alt=""
+              className="icon1"
+              src="https://v2.brittanychiang.com/img/icons/light-bulb.png"
+            />
             About Me
           </h4>
         </div>
         <div className="w-100">
           <h2 className="family1 fs-60 text-extra-bold text-grey">
-            I am a <span className="text-secondary">selectively skilled</span> product designer with strong focus on producing high quality
-            & impactful product experience
+          <TextIndex x={"  I am a product designer with strong focus on producing high quality impactful product experience"}/>
           </h2>
         </div>
       </div>
@@ -37,6 +42,8 @@ const SkillsWrapper = styled.div`
   padding: 10rem 0;
   padding-top: 15rem;
   transform-style: inherit;
+  background-color: rgb(13, 13, 13);
+  opacity: .9;
 
   .text1,
   .head {

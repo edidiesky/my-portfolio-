@@ -1,6 +1,13 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import TextIndex from "../common/Text";
 
+const whatIdoData = [
+  "Responsive design",
+  "Api development",
+  "Motion",
+  "Maintainable Codebase",
+];
 
 export default function AboutIndex() {
   return (
@@ -9,17 +16,33 @@ export default function AboutIndex() {
         <div className="w-100">
           <h4
             style={{ fontWeight: "normal" }}
-            className="text-white text-start"
+            className="text-grey family1 text-start flex item-center gap-2"
           >
+            <img
+              src="https://v2.brittanychiang.com/img/icons/settings.png"
+              alt=""
+              className="icon1"
+            />
             What I Do
           </h4>
         </div>
         <div className="w-100 grid">
           <div className="left flex item-start column">
-            <h2 className="fs-70 uppercase text-grey text-start">Responsive design</h2>
-            <h2 className="fs-70 uppercase text-grey text-start">Api development</h2>
-            <h2 className="fs-70 uppercase text-grey text-start">Motion </h2>
-            <h2 className="fs-70 uppercase text-grey text-start">Maintainable Codebase</h2>
+            {whatIdoData.map((x, index) => {
+              return (
+                <div className="w-100 hidden">
+                  <h2
+                    key={index}
+                    data-aos="fade-up"
+                    data-aos-duration="1000"
+                    data-aos-delay={index * 250}
+                    className="fs-60 py-1 text-grey family1 text-start"
+                  >
+                    <TextIndex x={x} />
+                  </h2>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
@@ -57,11 +80,7 @@ const SkillsWrapper = styled.div`
   h2 {
     letter-spacing: 2px;
     font-weight: bold;
-    font-size: 100px;
-    border-bottom: 1px solid rgba(255,255,255,.09);
-    @media (max-width: 780px) {
-      font-size: 65px;
-    }
+    border-bottom: 1px solid rgba(255, 255, 255, 0.09);
   }
 
   .icon1 {
