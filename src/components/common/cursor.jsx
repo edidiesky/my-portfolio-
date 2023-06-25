@@ -28,14 +28,15 @@ const Cursor = () => {
 };
 
 const CursorContent = styled.div`
-  width: 3rem;
-  height: 3rem;
+  width: 1.5rem;
+  height: 1.5rem;
   border-radius: 50%;
   background-color: var(--secondary);
   position: fixed;
   pointer-events: none;
   overflow: hidden;
   transform: translate3d(0, 0, 0);
+  z-index: 3000;
 `;
 
 export default Cursor;
