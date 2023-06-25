@@ -158,19 +158,19 @@ export default function WorkIndex() {
                   <div className="w-90 auto card_content_wrapper flex column gap-2">
                     <h3 className="fs-30 text-white">{x.text}</h3>
                     <div className="flex item-center tagwrapper">
-                      <div className="btn fs-14 family2 py-1" target="_blank">
+                      <div className="btn fs-20 py-1" target="_blank">
                         Reactjs
                       </div>{" "}
-                      <div className="btn fs-14 family2 py-1" target="_blank">
+                      <div className="btn fs-20 py-1" target="_blank">
                         Reactjs
                       </div>{" "}
-                      <div className="btn fs-14 family2 py-1" target="_blank">
+                      <div className="btn fs-20 py-1" target="_blank">
                         Reactjs
                       </div>{" "}
-                      <div className="btn fs-14 family2 py-1" target="_blank">
+                      <div className="btn fs-20 py-1" target="_blank">
                         Reactjs
                       </div>{" "}
-                      <div className="btn fs-14 family2 py-1" target="_blank">
+                      <div className="btn fs-20 py-1" target="_blank">
                         Reactjs
                       </div>
                     </div>
@@ -229,6 +229,8 @@ const SkillsWrapper = styled.div`
     .btn {
       padding: 0.5rem 1rem;
       color:var(--grey-1);
+      font-size: 10px;
+      letter-spacing: 2px;
     }
   }
 
