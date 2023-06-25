@@ -6,8 +6,8 @@ const whatIdoData = [
   "Fiverr",
   "Car Dealer",
   "Youtube",
-  "Bug Tracker",
-  "Facebook",
+  // "Bug Tracker",
+  // "Facebook",
 ];
 
 export default function WorkIndex() {

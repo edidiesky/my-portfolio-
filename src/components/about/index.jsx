@@ -36,7 +36,7 @@ export default function AboutIndex() {
                     data-aos="fade-up"
                     data-aos-duration="1000"
                     data-aos-delay={index * 250}
-                    className="fs-60 py-1 text-grey family1 text-start"
+                    className="text-grey family1 text-start"
                   >
                     <TextIndex x={x} />
                   </h2>
@@ -58,7 +58,19 @@ const SkillsWrapper = styled.div`
   padding: 6rem 0;
   padding-top: 15rem;
   transform-style: inherit;
-
+  background-color: rgb(13 13 13 / 83%);
+  
+  .line .span {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(13, 13, 13);
+    opacity: 0.9;
+    z-index: 4;
+    background-blend-mode: screen;
+  }
   .text1,
   .head {
     @media (max-width: 580px) {
@@ -80,7 +92,8 @@ const SkillsWrapper = styled.div`
   h2 {
     letter-spacing: 2px;
     font-weight: bold;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+    font-size: 60px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   }
 
   .icon1 {
