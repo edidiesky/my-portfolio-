@@ -269,6 +269,13 @@ const SkillsWrapper = styled.div`
     margin: 1px;
     z-index: 20;
   }
+  .card:nth-child(1) > .card_content {
+    background-image: radial-gradient(
+      800px circle at 100px 100px,
+      rgba(255, 255, 255, 0.06) 100px,
+      transparent 40%
+    );
+  }
   .images {
     height: 100%;
     width: 100%;
