@@ -228,7 +228,7 @@ const SkillsWrapper = styled.div`
     gap: 0.5rem;
     .btn {
       padding: 0.5rem 1rem;
-      color:var(--grey-1);
+      color: var(--grey-1);
       font-size: 10px;
       letter-spacing: 2px;
     }
@@ -256,7 +256,9 @@ const SkillsWrapper = styled.div`
     border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.07);
     border: 1px solid rgba(255, 255, 255, 0.03);
+    /* transform: all 0.6s; */
   }
+
   #cards:hover > .card > .card_border {
     opacity: 1;
   }

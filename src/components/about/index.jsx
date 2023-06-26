@@ -58,18 +58,18 @@ const SkillsWrapper = styled.div`
   padding: 6rem 0;
   padding-top: 15rem;
   transform-style: inherit;
-  background-color: rgb(13 13 13 / 83%);
-  
+  /* background-color: rgb(13, 13, 13); */
+  /* background-color: rgba(13, 13, 13, 0.81) !important; */
+
+
+ 
   .line .span {
     position: absolute;
     top: 0;
     right: 0;
     height: 100%;
     width: 100%;
-    background-color: rgb(13, 13, 13);
-    opacity: 0.9;
-    z-index: 4;
-    background-blend-mode: screen;
+    background-color: rgba(13, 13, 13, 0.81);
   }
   .text1,
   .head {

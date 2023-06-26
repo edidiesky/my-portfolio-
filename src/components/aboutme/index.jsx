@@ -26,7 +26,11 @@ export default function AboutMeIndex() {
         </div>
         <div className="w-100">
           <h2 className="family1 fs-60 text-extra-bold text-grey">
-          <TextIndex x={"  I am a product designer with strong focus on producing high quality impactful product experience"}/>
+            <TextIndex
+              x={
+                "  I am a full stack web developer with a keen focus to produce high quality product and an impactful user experience"
+              }
+            />
           </h2>
         </div>
       </div>
@@ -44,16 +48,16 @@ const SkillsWrapper = styled.div`
   transform-style: inherit;
   background-color: rgb(13, 13, 13);
   .line .span {
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  background-color: rgb(13, 13, 13);
-  opacity: .9;
-  z-index: 4;
-  background-blend-mode: screen;
-}
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(13, 13, 13);
+    opacity: 0.9;
+    z-index: 4;
+    background-blend-mode: screen;
+  }
 
   h2 {
     font-size: 60px;
