@@ -33,6 +33,10 @@ const LayoutWrapper = styled.div`
     justify-content: flex-end;
     .linktext2 {
       font-weight: 700;
+      transition: all .6s;
+      &:hover {
+        transform: translateX(-10px);
+      }
     }
   }
   .wrapperlink {

@@ -15,19 +15,22 @@ export default function MottoIndex() {
           <div className="flex textwrapper hidden w-100 column">
             <h2
               data-aos="fade-up"
-              data-aos-duration="1000"
+              data-aos-duration="1200"
               data-aos-delay={"250"}
               className="text-grey Mottotext hidden text-center"
             >
               GOOD DESIGN{" "}
-              <span
-                data-aos="fade-up"
-                data-aos-duration="1000"
-                data-aos-delay={"350"}
-              >
+              <div className="hidden">
                 {" "}
-                IS HONESTY
-              </span>
+                <span
+                  data-aos="fade-up"
+                  data-aos-duration="1400"
+                  data-aos-delay={"400"}
+                >
+                  {" "}
+                  IS HONESTY
+                </span>
+              </div>
             </h2>
           </div>
         </div>
@@ -60,6 +63,9 @@ const WorkWrapper = styled.div`
   min-height: 100vh;
   display: grid;
   place-items: center;
+  .hidden {
+    overflow: hidden;
+  }
   @media (max-width: 780px) {
     padding: 8rem 0;
   }

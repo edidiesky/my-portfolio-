@@ -59,7 +59,8 @@ export default function App() {
     //   });
 
     AOS.init({
-      once: true,
+      // once: true,
+      duration:4000
     });
     // }, [setCount, count]);
   }, []);

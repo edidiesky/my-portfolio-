@@ -15,7 +15,8 @@ export default function TextIndex({ x }) {
     spanElements.forEach((spanElement) => {
       gsap.to(spanElement, {
         width: "0%",
-        duration: 1,
+        duration: 1.3,
+        delay:.8,
         scrollTrigger: {
           trigger: lineElement,
           start: "top center",
@@ -28,7 +29,7 @@ export default function TextIndex({ x }) {
 
   return (
     <TetxIndexContent>
-      <div className="line" >
+      <div className="line">
         <h2 id="text" ref={lineRef} className="w-100">
           {x}
           <div className="span"></div>
