@@ -21,66 +21,55 @@ export default function App() {
       setCount(count + 1);
     }
   };
-  // useEffect(() => {
-  //   new SplitType("#herotext1");
-  //   setTimeout(updateCounter, 18);
-  //   gsap
-  //     .timeline()
-  //     .to(".counter", {
-  //       delay: 0.2,
-  //       duration: 6,
-  //       ease: "expo.inOut",
-  //     })
-  //     .to(".counter", {
-  //       delay: 0.2,
-  //       duration: 1,
-  //       opacity: 0,
-  //       visibility: "hidden",
-  //       ease: "expo.inOut",
-  //     })
-  //     .to(".bar", {
-  //       height: 0,
-  //       delay: 0.1,
-  //       duration: 0.5,
-  //       stagger: {
-  //         amount: 0.5,
-  //       },
-  //       ease: "power1.out",
-  //     })
-  //     .to(".overlay", {
-  //       delay: 0.2,
-  //       duration: 1,
-  //       opacity: 0,
-  //       visibility: "hidden",
-  //       ease: "expo.inOut",
-  //     })
-  //     .to(".word", {
-  //       delay: 1,
-  //       duration: 1.2,
-  //       transform: "none",
-  //       opacity: 1,
-  //       stagger: {
-  //         amount: 1,
-  //       },
-  //     });
-
-  //   AOS.init({
-  //     once: true,
-  //   });
-  // }, [setCount, count]);
-
   useEffect(() => {
-
+    // new SplitType("#herotext1");
+    // setTimeout(updateCounter, 8);
+    // gsap
+    //   .timeline()
+    //   .to(".counter", {
+    //     delay: 0.2,
+    //     duration: 6,
+    //     ease: "expo.inOut",
+    //   })
+    //   .to(".counter", {
+    //     delay: 0.2,
+    //     duration: 1,
+    //     opacity: 0,
+    //     visibility: "hidden",
+    //     ease: "expo.inOut",
+    //   })
+    //   .to(".bar", {
+    //     height: 0,
+    //     delay: 0.1,
+    //     duration: 0.5,
+    //     stagger: {
+    //       amount: 0.5,
+    //     },
+    //     ease: "power1.out",
+    //   })
+    //   .to(".overlay", {
+    //     delay: 0.2,
+    //     duration: 1,
+    //     opacity: 0,
+    //     visibility: "hidden",
+    //     ease: "expo.inOut",
+    //   })
+    //   .from(".left .herotext", {
+    //     transform: "translateY(200px)"
+    //   });
 
     AOS.init({
       once: true,
     });
+    // }, [setCount, count]);
   }, []);
+
   const [height, setHeight] = useState(0);
+  // let nepalight = true
 
   return (
     <div className="based" style={{ height }}>
-      <Cursor/>
+      <Cursor />
       {/* <h1 ref={counterref} className="counter text-white">
         {count}
       </h1>

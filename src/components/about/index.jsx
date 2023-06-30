@@ -58,7 +58,7 @@ const SkillsWrapper = styled.div`
   padding: 6rem 0;
   padding-top: 15rem;
   transform-style: inherit;
-  /* background-color: rgb(13, 13, 13); */
+  background-color: rgb(13, 13, 13);
   /* background-color: rgba(13, 13, 13, 0.81) !important; */
 
 

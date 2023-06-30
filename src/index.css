@@ -11,7 +11,6 @@
   position: relative;
 }
 
-
 .target {
   font-kerning: none;
 }
@@ -61,14 +60,13 @@ body {
   transform: translate3d(0, 200px, 0);
 }
 .overlay {
-  z-index: 1600;
+  z-index: 3000600;
   font-weight: 700;
   width: 100vw;
   height: 100vh;
   display: flex;
   position: fixed;
   align-items: flex-end;
-
 }
 
 .overlay .bar {
@@ -87,8 +85,8 @@ body {
   padding: 1rem 2rem;
   font-size: 20rem;
   color: #fff;
-  z-index: 30000;
-  background-color: #1a1a1a;
+  z-index: 33330000;
+  /* background-color: #1a1a1a; */
 }
 
 html {
@@ -143,6 +141,41 @@ html {
 
 .subBtn:hover {
   background-color: var(--blue-2);
+}
+
+.pace {
+  pointer-events: none;
+  z-index: 6300;
+  font-weight: 700;
+  position: fixed;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 1px;
+  overflow: hidden;
+  background-color: #1b1b1b !important;
+  /* height: 2px; */
+  /* border-radius: 50%; */
+  /* border: 2px solid #1b1b1b !important; */
+}
+
+.pace.pace-inactive {
+  display: block;
+}
+
+.pace .pace-progress {
+  background: #ffffff !important;
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  max-width: 300px;
+  right: 100%;
+  width: 100%;
+  height: 1px;
+  z-index: 2200;
+  /* border-radius: inherit; */
+  /* border: 1px solid #fff !important; */
 }
 
 .btn {
@@ -494,7 +527,6 @@ a:hover {
 .fs-46 {
   font-size: 46px;
 }
-
 
 .fs-12 {
   font-size: 12px;

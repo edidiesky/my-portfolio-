@@ -11,14 +11,15 @@ export default function HeroIndex() {
     return (
       <div className="w-100 hero">
         <div className="left w-100 h-100 flex justify-center item-center column gap-2">
-          <h4>Edidiong Essien</h4>
+          <h4 className="herotext">Edidiong Essien</h4>
           <div className="flex textwrapper w-100 column">
-            <div className="hidden">
-              <h1 id="herotext1" className="text-grey text hidden text-center">
-                Making <span className="text-secondary">good stuffs</span> a
-                reality
-              </h1>
-            </div>
+            <h2 className="text-grey herotext hidden text-center">
+              Making{" "}
+              <span className="text-secondary">
+                good stuffs
+              </span>{" "}
+              a reality
+            </h2>
           </div>
         </div>
       </div>
@@ -54,7 +55,7 @@ const WorkWrapper = styled.div`
   .wrapperlink {
     padding-top: 5rem;
   }
-  h1 {
+  h2 {
     font-size: 15rem;
     line-height: 130px;
     font-weight: normal;
