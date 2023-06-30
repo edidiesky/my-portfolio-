@@ -94,7 +94,7 @@ const SkillsWrapper = styled.div`
     .images {
       object-fit: cover;
       position: absolute;
-      width: 75%;
+      width: 65%;
       margin: 0 auto;
       z-index: 300;
       background-attachment: fixed;

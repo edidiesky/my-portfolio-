@@ -17,6 +17,7 @@ import HeroIndex from "../components/hero";
 import AboutMeIndex from "../components/aboutme";
 import { Footer } from "../components/common";
 import WorkIndex from "../components/work";
+import MottoIndex from "../components/motto";
 const LayoutWrapper = styled.div`
   width: 100%;
   display: flex;
@@ -126,7 +127,7 @@ export default function Layout() {
           <AboutIndex />
           <WorkIndex />
           <SkillsIndex />
-
+          <MottoIndex/>
           <Footer />
         </div>
       </div>

@@ -35,13 +35,13 @@ export default function Footer() {
         <div className="w-100 grid grid-wrapper">
           <div className="left flex column gap-4">
             <div className="w-100 grid grid-auto">
-              <ul className="flex column">
-                <li className="fs-35 text-grey">Github</li>
-                <li className="fs-35 text-grey">Linkedlin</li>
+              <ul className="flex column gap-1">
+                <li className="fs-24 family2 text-grey">Github</li>
+                <li className="fs-24 family2 text-grey">Linkedlin</li>
               </ul>
-              <ul className="flex column">
-                <li className="fs-35 text-grey">Twitter</li>
-                <li className="fs-35 text-grey">Facebook</li>
+              <ul className="flex column gap-1">
+                <li className="fs-24 family2 text-grey">Twitter</li>
+                <li className="fs-24 family2 text-grey">Facebook</li>
               </ul>
               <ul className="flex column gap-3">
                 <li className="fs-12 text-bold family1 text-grey">

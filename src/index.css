@@ -261,7 +261,7 @@ input {
 }
 
 p {
-  font-family: "Nunito  ", sans-serif;
+  font-family: "Nunito", sans-serif;
 }
 
 /* h1 {
@@ -276,9 +276,13 @@ p {
 .family2 {
   font-family: "Lora", sans-serif;
 }
+.family3 {
+  font-family: "Work Sans", sans-serif;
+}
 h4 {
-  font-size: 11px;
+  font-size: 12px;
   letter-spacing: 8px;
+  font-weight: bold;
   text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
   color: var(--grey-1);
