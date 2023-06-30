@@ -29,7 +29,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: "Bebas Neue", sans-serif;
-  line-height: 1.1;
+  line-height: 1;
+  /* line-height: 30px; */
   background-color: var(--primary);
   color: var(--primary);
   font-weight: normal;

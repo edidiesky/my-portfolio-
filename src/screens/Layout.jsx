@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { BsGithub, BsTwitter } from "react-icons/bs";
+import { Link as Links } from "react-scroll";
+
 import { AiFillLinkedin } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import SmallSidebar from "./sidebar/SmallSidebar";
@@ -21,6 +23,17 @@ const LayoutWrapper = styled.div`
   flex-direction: column;
   align-items: flex-start;
   background-color: rgb(51, 51, 51);
+  .list {
+    position: fixed;
+    top: 6%;
+    right: 5%;
+    z-index: 30000;
+    gap: .5rem;
+    justify-content: flex-end;
+    .linktext2 {
+      font-weight: 700;
+    }
+  }
   .wrapperlink {
     position: fixed;
     bottom: 10%;
@@ -35,6 +48,12 @@ const LayoutWrapper = styled.div`
     }
   }
 `;
+
+const data = [
+  { id: 1, title: "About", path: "about" },
+  { id: 3, title: "Work", path: "work" },
+  { id: 5, title: "Contact", path: "contact" },
+];
 
 export default function Layout() {
   const [height, setHeight] = useState(0);
@@ -84,14 +103,31 @@ export default function Layout() {
         <Message />
         {/* <Header /> */}
         <SmallSidebar />
+
+        <div className="flex item-end justify-end column list flex-1">
+          {data.map((x) => {
+            return (
+              <Links
+                spy={true}
+                smooth={true}
+                duration={1000}
+                className="linktext2 family1 linktext1 text-extra-bold fs-12 text-grey text-light"
+                to={`${x.path}`}
+                key={x.id}
+              >
+                {x.title}
+              </Links>
+            );
+          })}
+        </div>
         <div className="container">
           <HeroIndex />
-          <AboutMeIndex/>
+          <AboutMeIndex />
           <AboutIndex />
           <WorkIndex />
           <SkillsIndex />
-          
-          <Footer/>
+
+          <Footer />
         </div>
       </div>
     </LayoutWrapper>

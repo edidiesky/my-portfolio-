@@ -77,9 +77,10 @@ const WorkWrapper = styled.div`
       width: 90%;
     }
     @media (max-width: 390px) {
-      line-height: 85px;
-      font-size: 11rem;
+      line-height: 70px;
+      font-size: 9.8rem;
       width: 100%;
+      font-weight: normal;
     }
   }
 `;

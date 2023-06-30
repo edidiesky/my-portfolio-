@@ -5,7 +5,7 @@ import TextIndex from "../common/Text";
 const whatIdoData = [
   "Responsive design",
   "Api development",
-  "Motion",
+  "Animations",
   "Maintainable Codebase",
 ];
 
@@ -36,7 +36,7 @@ export default function AboutIndex() {
                     data-aos="fade-up"
                     data-aos-duration="1000"
                     data-aos-delay={index * 250}
-                    className="text-grey w-100 family1 text-start"
+                    className="text-grey w-100 uppercase text-start"
                   >
                     <TextIndex x={x} />
                   </h2>
@@ -89,10 +89,11 @@ const SkillsWrapper = styled.div`
     content: "";
   }
   h2 {
-    letter-spacing: 2px;
-    font-weight: bold;
-    font-size: 65px;
+    letter-spacing: 1px;
+    font-weight: normal;
+    font-size: 100px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 0;
     @media (max-width: 980px) {
       font-size: 4.8rem;
     }

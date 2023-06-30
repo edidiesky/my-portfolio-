@@ -15,7 +15,7 @@ export default function AboutMeIndex() {
           alt=""
         />
       </div> */}
-      <div className="left w-85 auto h-100 flex column gap-2">
+      <div className="left w-85 auto h-100 flex column">
         <div className="w-100">
           <h4
             style={{ fontWeight: "normal" }}
@@ -60,7 +60,6 @@ const SkillsWrapper = styled.div`
     height: 100%;
     width: 100%;
     background-color: rgba(13, 13, 13, 0.852);
-    
   }
   .imageWrapper > img {
     position: absolute;
@@ -70,7 +69,7 @@ const SkillsWrapper = styled.div`
   }
 
   h2 {
-    font-size: 65px;
+    font-size: 60px;
     @media (max-width: 980px) {
       font-size: 4.8rem;
     }
