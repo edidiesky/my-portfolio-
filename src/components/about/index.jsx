@@ -12,7 +12,7 @@ const whatIdoData = [
 export default function AboutIndex() {
   return (
     <SkillsWrapper id="about">
-      <div className="left w-85 auto h-100 flex column gap-3">
+      <div className="left w-85 auto h-100 flex column">
         <div className="w-100">
           <h4
             style={{ fontWeight: "normal" }}
