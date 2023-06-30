@@ -24,6 +24,14 @@ const LayoutWrapper = styled.div`
   flex-direction: column;
   align-items: flex-start;
   background-color: rgb(51, 51, 51);
+  .social {
+    svg {
+      font-size: 20px;
+      @media (max-width:780px) {
+        font-size: 16px;
+      }
+    }
+  }
   .list {
     position: fixed;
     top: 6%;
@@ -73,20 +81,20 @@ export default function Layout() {
     <LayoutWrapper className="based" style={{ height }}>
       <div className="LayoutContainer">
         {/* <SidebarIndex /> */}
-        <div className=" wrapperlink flex column gap-3">
+        <div className=" wrapperlink flex column gap-2">
           <Link
             to={"https://github.com/Vivixell/portfolioVictorRobin"}
             target="_blank"
             className="social"
           >
-            <BsGithub color="var(--grey-1)" fontSize={"20px"} />
+            <BsGithub color="var(--grey-1)" />
           </Link>
           <Link
             to={"https://github.com/Vivixell/portfolioVictorRobin"}
             target="_blank"
             className="social"
           >
-            <BsGithub color="var(--grey-1)" fontSize={"20px"} />
+            <BsGithub color="var(--grey-1)" />
           </Link>
           <Link
             to={
@@ -95,14 +103,14 @@ export default function Layout() {
             target="_blank"
             className="social"
           >
-            <BsTwitter color="var(--grey-1)" fontSize={"20px"} />
+            <BsTwitter color="var(--grey-1)" />
           </Link>
           <Link
             to={"https://linkedin.com/in/robinvictoro"}
             target="_blank"
             className="social"
           >
-            <AiFillLinkedin color="var(--grey-1)" fontSize={"20px"} />
+            <AiFillLinkedin color="var(--grey-1)" />
           </Link>
         </div>
         <Message />
