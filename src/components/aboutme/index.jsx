@@ -8,8 +8,13 @@ import TextIndex from "../common/Text";
 export default function AboutMeIndex() {
   return (
     <SkillsWrapper id="about">
-      <div className="imageWrapper"></div>
-      <div className="imagegradient"></div>
+      {/* <div className="imageWrapper">
+        <img
+          src="https://minhpham.design/assets/images/planet-1-1.png"
+          className="w-100 h-100"
+          alt=""
+        />
+      </div> */}
       <div className="left w-85 auto h-100 flex column gap-2">
         <div className="w-100">
           <h4
@@ -46,21 +51,32 @@ const SkillsWrapper = styled.div`
   padding: 10rem 0;
   padding-top: 15rem;
   transform-style: inherit;
-  background-color: rgb(13, 13, 13);
+  /* background-color: rgb(13, 13, 13); */
+  min-height: 100vh;
   .line .span {
     position: absolute;
     top: 0;
     right: 0;
     height: 100%;
     width: 100%;
-    background-color: rgb(13, 13, 13);
-    opacity: 0.9;
-    z-index: 4;
-    background-blend-mode: screen;
+    background-color: rgba(13, 13, 13, 0.852);
+    
+  }
+  .imageWrapper > img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
   }
 
   h2 {
-    font-size: 60px;
+    font-size: 65px;
+    @media (max-width: 980px) {
+      font-size: 4.8rem;
+    }
+    @media (max-width: 380px) {
+      font-size: 4rem;
+    }
   }
 
   .text1,

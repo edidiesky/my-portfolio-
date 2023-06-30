@@ -16,7 +16,7 @@ export default function AboutIndex() {
         <div className="w-100">
           <h4
             style={{ fontWeight: "normal" }}
-            className="text-grey family1 text-start flex item-center gap-2"
+            className="text-grey family2 text-start flex item-center gap-2"
           >
             <img
               src="https://v2.brittanychiang.com/img/icons/settings.png"
@@ -36,7 +36,7 @@ export default function AboutIndex() {
                     data-aos="fade-up"
                     data-aos-duration="1000"
                     data-aos-delay={index * 250}
-                    className="text-grey family1 text-start"
+                    className="text-grey w-100 family1 text-start"
                   >
                     <TextIndex x={x} />
                   </h2>
@@ -58,18 +58,17 @@ const SkillsWrapper = styled.div`
   padding: 6rem 0;
   padding-top: 15rem;
   transform-style: inherit;
-  background-color: rgb(13, 13, 13);
   /* background-color: rgba(13, 13, 13, 0.81) !important; */
 
-
- 
   .line .span {
     position: absolute;
     top: 0;
     right: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba(13, 13, 13, 0.81);
+    background-color: rgba(13, 13, 13);
+    background-color: rgba(13, 13, 13, 0.852);
+
   }
   .text1,
   .head {
@@ -92,8 +91,14 @@ const SkillsWrapper = styled.div`
   h2 {
     letter-spacing: 2px;
     font-weight: bold;
-    font-size: 60px;
+    font-size: 65px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    @media (max-width: 980px) {
+      font-size: 4.8rem;
+    }
+    @media (max-width: 380px) {
+      font-size: 4rem;
+    }
   }
 
   .icon1 {

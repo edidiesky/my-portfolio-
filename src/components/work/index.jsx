@@ -157,6 +157,7 @@ export default function WorkIndex() {
                 <div className="card_content flex py-2 column gap-4">
                   <div className="w-90 auto card_content_wrapper flex column gap-2">
                     <h3 className="fs-30 text-white">{x.text}</h3>
+                    <h5 className="fs-12 family2 text-light text-grey">A clone of the airbnb website with full functionality</h5>
                     <div className="flex item-center tagwrapper">
                       <div className="btn fs-20 py-1" target="_blank">
                         Reactjs
@@ -228,7 +229,7 @@ const SkillsWrapper = styled.div`
     gap: 0.5rem;
     .btn {
       padding: 0.5rem 1rem;
-      color: var(--grey-1);
+      color: #fff;
       font-size: 10px;
       letter-spacing: 2px;
     }
@@ -245,12 +246,12 @@ const SkillsWrapper = styled.div`
   .grid {
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 8px;
-    @media (max-width: 780px) {
+    @media (max-width: 980px) {
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
   }
   .card {
-    min-height: 280px;
+    min-height: 320px;
     width: 100%;
     position: relative;
     border-radius: 10px;

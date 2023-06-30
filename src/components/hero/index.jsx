@@ -61,6 +61,11 @@ const WorkWrapper = styled.div`
     font-weight: normal;
     width: 50%;
     margin: 0 auto;
+    @media (max-width: 980px) {
+      line-height: 100px;
+      font-size: 14rem;
+      width: 70%;
+    }
 
     @media (max-width: 780px) {
       line-height: 100px;
@@ -73,7 +78,7 @@ const WorkWrapper = styled.div`
     }
     @media (max-width: 390px) {
       line-height: 85px;
-      font-size: 12rem;
+      font-size: 11rem;
       width: 100%;
     }
   }

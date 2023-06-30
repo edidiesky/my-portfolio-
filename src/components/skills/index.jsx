@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 
-
 const newskills = [
   "Reactjs",
   "Tailwind css",
@@ -15,15 +14,14 @@ const newskills = [
   "Redux",
 ];
 
-
 export default function SkillsIndex() {
   const SkillsLeft = () => {
     return (
       <div className="left w-85 auto h-100 flex column gap-1">
-        <div className="w-100 auto">
+        <div className="w-100 wrapper auto">
           <h4
-            style={{ fontWeight: "normal" }}
-            className="text-grey family1 text-start flex item-center gap-2"
+            style={{ fontWeight: "normal", zIndex: 2000 }}
+            className="text-white family1 text-start flex item-center gap-2"
           >
             <img
               src="https://v2.brittanychiang.com/img/icons/settings.png"
@@ -58,6 +56,13 @@ export default function SkillsIndex() {
 
   return (
     <SkillsWrapper id="skills">
+      <div className="imageWrapper flex item-center justify-center">
+        <img
+          src="https://minhpham.design/assets/images/planet-1-1.png"
+          className="images"
+          alt=""
+        />
+      </div>
       <SkillsLeft />
     </SkillsWrapper>
   );
@@ -74,6 +79,27 @@ const SkillsWrapper = styled.div`
   background-color: #fff;
   background-color: #151315;
   /* z-index: 200000; */
+  .wrapper {
+    z-index: 3000;
+    background-color: transparent;
+  }
+
+  .imageWrapper {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    /* z-index: 300; */
+
+    object-fit: cover;
+    .images {
+      object-fit: cover;
+      position: absolute;
+      width: 75%;
+      margin: 0 auto;
+      z-index: 300;
+      background-attachment: fixed;
+    }
+  }
 
   .grid-auto {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -82,7 +108,7 @@ const SkillsWrapper = styled.div`
       grid-template-columns: repeat(auto-fit, minmax(auto, 1fr));
     }
     @media (max-width: 580px) {
-      grid-template-columns: repeat(auto-fit, minmax(auto, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
       grid-gap: 2rem;
     }
   }
@@ -130,8 +156,9 @@ const SkillsWrapper = styled.div`
     height: 20rem;
     border-radius: 50%;
     letter-spacing: 3px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     font-size: 12px;
+    z-index: 3000;
     @media (max-width: 780px) {
       width: 18rem;
       height: 18rem;
