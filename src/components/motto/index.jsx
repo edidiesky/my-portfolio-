@@ -7,48 +7,35 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export default function MottoIndex() {
-  const WorkLeft = () => {
-    return (
-      <div className="w-100 Motto">
-        <div className="left w-100 h-100 flex justify-center item-center column gap-2">
-          <h4 className="Mottotext">My Motto</h4>
-          <div className="flex textwrapper hidden w-100 column">
-            <h2
-              data-aos="fade-up"
-              data-aos-duration="1200"
-              data-aos-delay={"250"}
-              className="text-grey Mottotext hidden text-center"
-            >
-              GOOD DESIGN{" "}
-              <div className="hidden">
-                {" "}
-                <span
-                  data-aos="fade-up"
-                  data-aos-duration="1400"
-                  data-aos-delay={"400"}
-                >
-                  {" "}
-                  IS HONESTY
-                </span>
-              </div>
-            </h2>
-          </div>
-        </div>
-      </div>
-    );
-  };
-
   return (
     <WorkWrapper>
-      {/* <div className="imageWrapper flex item-center justify-center">
-        <img
-          src="https://minhpham.design/assets/images/banner-bottom-50.jpg"
-          className="images"
-          alt=""
-        />
-      </div> */}
       <div className="w-85 auto flex item-center gap-6 justify-space">
-        <WorkLeft />
+        <div className="w-100 Motto">
+          <div className="left w-100 h-100 flex justify-center item-center column gap-2">
+            <h4 className="Mottotext">My Motto</h4>
+            <div className="flex textwrapper hidden w-100 column">
+              <h2
+                data-aos="fade-up"
+                data-aos-duration="2000"
+                data-aos-delay={"250"}
+                className="text-grey Mottotext hidden text-center"
+              >
+                GOOD DESIGN{" "}
+                <div className="hidden">
+                  {" "}
+                  <span
+                    data-aos="fade-up"
+                    data-aos-duration="2600"
+                    data-aos-delay={"400"}
+                  >
+                    {" "}
+                    IS HONESTY
+                  </span>
+                </div>
+              </h2>
+            </div>
+          </div>
+        </div>
       </div>
     </WorkWrapper>
   );
