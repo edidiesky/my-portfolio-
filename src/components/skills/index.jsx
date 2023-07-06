@@ -17,8 +17,9 @@ const newskills = [
 export default function SkillsIndex() {
   const SkillsLeft = () => {
     return (
-      <div className="left w-85 auto h-100 flex column gap-1">
-        <div className="w-100 wrapper auto">
+      <div className="left w-85 auto item-center justify-center h-100 flex column gap-1">
+  
+        <div className="flex w-100 flex column gap-1">
           <h4
             style={{ fontWeight: "normal", zIndex: 2000 }}
             className="text-white family1 text-start flex item-center gap-2"
@@ -30,23 +31,23 @@ export default function SkillsIndex() {
             />
             Skills
           </h4>
-        </div>
-        <div className="w-100 grid grid-wrapper">
-          <div className="left flex column gap-4">
-            <div className="w-100 grid grid-auto">
-              {newskills.map((x, index) => {
-                return (
-                  <div
-                    className="w-100 card family1 text-grey uppercase"
-                    key={index}
-                    data-aos="fade-up"
-                    data-aos-duration="1000"
-                    data-aos-delay={index * 250}
-                  >
-                    {x}
-                  </div>
-                );
-              })}
+          <div className="w-100 grid grid-wrapper">
+            <div className="left  h-100 gap-4">
+              <div className="w-100 grid grid-auto">
+                {newskills.map((x, index) => {
+                  return (
+                    <div
+                      className="w-100 card family1 text-grey uppercase"
+                      key={index}
+                      data-aos="fade-up"
+                      data-aos-duration="1000"
+                      data-aos-delay={index * 250}
+                    >
+                      {x}
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           </div>
         </div>
@@ -74,8 +75,8 @@ const SkillsWrapper = styled.div`
   position: relative;
   padding: 5rem 0;
   padding-top: 15rem;
-  display: grid;
-  place-items: center;
+  /* display: grid;
+  place-items: center; */
   background-color: #fff;
   background-color: #151315;
   /* z-index: 200000; */
@@ -102,7 +103,7 @@ const SkillsWrapper = styled.div`
   }
 
   .grid-auto {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 4rem;
     @media (max-width: 980px) {
       grid-template-columns: repeat(auto-fit, minmax(auto, 1fr));

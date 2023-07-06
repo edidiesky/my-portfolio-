@@ -22,6 +22,19 @@ button {
 .wrapper {
   background-color: var(--primary);
 }
+.wrapper {
+  /* position: absolute; */
+  width: 100vw;
+  height: 100vh;
+}
+/* .wrapper h1 {
+  font-size: 70px;
+  font-weight: normal;
+  letter-spacing: 2px;
+  color: #fff;
+  line-height: 5.9rem;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+} */
 
 html,
 body {
@@ -56,10 +69,17 @@ body {
   opacity: 0;
   transform: translate3d(0, -200px, 0);
 } */
-.word {
+/* .word {
   opacity: 0;
   transform: translate3d(0, 200px, 0);
-}
+} */
+/* .word {
+  display: block !important;
+} */
+/* .text {
+  transform: translateY(350px);
+  transition: all 0.4s;
+} */
 .overlay {
   z-index: 3000600;
   font-weight: 700;
@@ -67,13 +87,14 @@ body {
   height: 100vh;
   display: flex;
   position: fixed;
+  background-color: var(--grey-1);
   align-items: flex-end;
 }
 
 .overlay .bar {
   width: 10vw;
-  height: 126vh;
-  background-color: #1a1a1a;
+  height: 0;
+  background-color: var(--primary);
 }
 
 .counter {

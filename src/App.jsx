@@ -8,6 +8,7 @@ import "aos/dist/aos.css";
 import "animate.css";
 import { Layout } from "./screens";
 import Cursor from "./components/common/cursor";
+import HeroIndex from "./components/hero";
 
 export default function App() {
   const [count, setCount] = useState(0);
@@ -21,59 +22,76 @@ export default function App() {
       setCount(count + 1);
     }
   };
-  useEffect(() => {
-    // new SplitType("#herotext1");
-    // setTimeout(updateCounter, 8);
-    // gsap
-    //   .timeline()
-    //   .to(".counter", {
-    //     delay: 0.2,
-    //     duration: 6,
-    //     ease: "expo.inOut",
-    //   })
-    //   .to(".counter", {
-    //     delay: 0.2,
-    //     duration: 1,
-    //     opacity: 0,
-    //     visibility: "hidden",
-    //     ease: "expo.inOut",
-    //   })
-    //   .to(".bar", {
-    //     height: 0,
-    //     delay: 0.1,
-    //     duration: 0.5,
-    //     stagger: {
-    //       amount: 0.5,
-    //     },
-    //     ease: "power1.out",
-    //   })
-    //   .to(".overlay", {
-    //     delay: 0.2,
-    //     duration: 1,
-    //     opacity: 0,
-    //     visibility: "hidden",
-    //     ease: "expo.inOut",
-    //   })
-    //   .from(".left .herotext", {
-    //     transform: "translateY(200px)"
-    //   });
 
+  useEffect(() => {
+    const mytext = new SplitType("#text");
+    gsap
+      .timeline()
+      // .to(".counter", {
+      //   delay: 0.2,
+      //   duration: 6,
+      //   ease: "expo.inOut",
+      // })
+      // .to(".counter", {
+      //   delay: 0.2,
+      //   duration: 1,
+      //   opacity: 0,
+      //   visibility: "hidden",
+      //   ease: "expo.inOut",
+      // })
+      .to(".bar", {
+        height: '126vh',
+        delay: 0.8,
+        duration: 0.9,
+        ease: "easeOutExpo",
+        stagger: {
+          amount: 0.5,
+        },
+      })
+      .to(".overlay", {
+        delay: 1,
+        duration: 1.2,
+        opacity: 0,
+        visibility: "hidden",
+        ease: "easeOutExpo",
+      })
+
+      .fromTo(
+        ".text1",
+        { skewY: 50, y: 480 }, // Initial skewY value
+        {
+          skewY: 0,
+          y: 0,
+          duration: 1,
+          delay: 1,
+          // ease: "elastic.out(1, 0.5)",
+          ease: "easeOutExpo",
+          stagger: {
+            amount: 0.5,
+          },
+        }
+      )
+      .to(".char", {
+        y: 0,
+        delay: .4,
+        duration: 1.7,
+        ease: "easeOutExpo",
+        stagger: {
+          amount: 0.5,
+        },
+      }); // Final skewY value and duration);
     AOS.init({
       once: true,
-      duration:4000
+      duration: 4000,
     });
-    // }, [setCount, count]);
   }, []);
-
   const [height, setHeight] = useState(0);
-  // let nepalight = true
-
   return (
     <div className="based" style={{ height }}>
       <Cursor />
       {/* <h1 ref={counterref} className="counter text-white">
         {count}
-      </h1>
+      </h1> */}
       <div className="overlay">
         <div className="bar"></div>
         <div className="bar"></div>
@@ -85,10 +103,11 @@ export default function App() {
         <div className="bar"></div>
         <div className="bar"></div>
         <div className="bar"></div>
-      </div> */}
+      </div>
       <Routes>
         <Route path={"/"} element={<Layout />}></Route>
       </Routes>
+      {/* <HeroIndex /> */}
     </div>
   );
 }
