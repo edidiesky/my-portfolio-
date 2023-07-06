@@ -88,7 +88,7 @@ export default function App() {
   const [height, setHeight] = useState(0);
   return (
     <div className="based" style={{ height }}>
-      <Cursor />
+      {/* <Cursor /> */}
       {/* <h1 ref={counterref} className="counter text-white">
         {count}
       </h1> */}

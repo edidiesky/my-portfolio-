@@ -89,7 +89,7 @@ const WorkWrapper = styled.div`
     @media (max-width: 980px) {
       line-height: 100px;
       font-size: 14rem;
-      width: 70%;
+      width: 90%;
     }
 
     @media (max-width: 780px) {

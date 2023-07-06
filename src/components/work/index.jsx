@@ -5,7 +5,6 @@ import TextIndex from "../common/Text";
 
 const workdata = [
   {
-    image: "./jobit.png",
     description:
       "This is a clone of streaming platform. It houses a client side and a server side built with the tools below",
     tools: [
@@ -15,14 +14,12 @@ const workdata = [
       "NODEJS",
       "EXPRESSJS",
       "MONGODB",
-      "HTML",
     ],
     link1: "",
-    link2: "",
+    link2: "https://github.com/edidiesky/airbnb",
     text: "Airbnb",
   },
   {
-    image: "./jobit.png",
     description:
       "This is a clone of streaming platform. It houses a client side and a server side built with the tools below",
     tools: [
@@ -32,14 +29,12 @@ const workdata = [
       "NODEJS",
       "EXPRESSJS",
       "MONGODB",
-      "HTML",
     ],
     link1: "",
-    link2: "",
+    link2: "https://github.com/edidiesky/fiverrClone_1-",
     text: "Fiverr",
   },
   {
-    image: "./jobit.png",
     description:
       "This is a clone of streaming platform. It houses a client side and a server side built with the tools below",
     tools: [
@@ -52,7 +47,7 @@ const workdata = [
       "TYPESCRIPT",
     ],
     link1: "",
-    link2: "",
+    link2: "https://github.com/edidiesky/airbnb",
     text: "Youtube",
   },
 ];
@@ -115,7 +110,7 @@ export default function WorkIndex() {
                         return (
                           <div
                             key={index}
-                            className="btn fs-20 py-1 family1 uppercase"
+                            className="btn py-1 family1 uppercase"
                             target="_blank"
                           >
                             {x}
@@ -123,7 +118,10 @@ export default function WorkIndex() {
                         );
                       })}
                     </div>
-                    <div className="w-100 btnWrapper flex item-center gap-1">
+                    <div
+                      style={{ flexWrap: "wrap" }}
+                      className="w-100 btnWrapper flex item-center gap-1"
+                    >
                       {x.link1 ? (
                         <Link
                           to={x.link1}
@@ -188,6 +186,9 @@ const SkillsWrapper = styled.div`
       color: #fff;
       font-size: 10px;
       letter-spacing: 2px;
+      @media (max-width: 480px) {
+        font-size: 10px;
+      }
     }
   }
 
@@ -213,6 +214,7 @@ const SkillsWrapper = styled.div`
     border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.07);
     border: 1px solid rgba(255, 255, 255, 0.03);
+    z-index: 3000;
     /* transform: all 0.6s; */
   }
 
@@ -263,8 +265,11 @@ const SkillsWrapper = styled.div`
   .btn {
     padding: 0.9rem 1.8rem;
     border-radius: 40px;
-    font-size: 9px;
+    font-size: 10px;
     cursor: pointer;
+    text-transform: uppercase;
+    cursor: pointer;
+    z-index: 3000000;
   }
   .card > .card_border {
     background-image: radial-gradient(
