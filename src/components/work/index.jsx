@@ -303,14 +303,12 @@ const SkillsWrapper = styled.div`
     font-size: 120px;
     padding: 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.09);
-    @media (max-width: 780px) {
-      font-size: 65px;
-    }
+   
     @media (max-width: 980px) {
-      font-size: 4.8rem;
+      font-size: 8rem;
     }
-    @media (max-width: 380px) {
-      font-size: 4rem;
+    @media (max-width: 780px) {
+      font-size: 60px;
     }
   }
 

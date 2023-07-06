@@ -68,7 +68,6 @@ const SkillsWrapper = styled.div`
     width: 100%;
     background-color: rgba(13, 13, 13);
     background-color: rgba(13, 13, 13, 0.852);
-
   }
   .text1,
   .head {
@@ -94,11 +93,14 @@ const SkillsWrapper = styled.div`
     font-size: 100px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     padding: 0;
+
     @media (max-width: 980px) {
-      font-size: 4.8rem;
+      font-size: 8rem;
+      /* font-weight: bold; */
     }
-    @media (max-width: 380px) {
-      font-size: 4rem;
+    @media (max-width: 580px) {
+      font-size: 6rem;
+      /* font-weight: bold; */
     }
   }
 

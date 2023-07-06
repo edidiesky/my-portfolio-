@@ -81,7 +81,7 @@ export default function App() {
         },
       }); // Final skewY value and duration);
     AOS.init({
-      once: true,
+      // once: true,
       duration: 4000,
     });
   }, []);

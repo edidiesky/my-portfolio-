@@ -42,6 +42,9 @@ const LayoutWrapper = styled.div`
     .linktext2 {
       font-weight: 700;
       transition: all .6s;
+      @media (max-width:480px) {
+        font-size: 10px;
+      }
       &:hover {
         transform: translateX(-10px);
       }

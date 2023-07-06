@@ -13,26 +13,27 @@ export default function MottoIndex() {
         <div className="w-100 Motto">
           <div className="left w-100 h-100 flex justify-center item-center column gap-2">
             <h4 className="Mottotext">My Motto</h4>
-            <div className="flex textwrapper hidden w-100 column">
-              <h2
-                data-aos="fade-up"
-                data-aos-duration="2000"
-                data-aos-delay={"250"}
-                className="text-grey Mottotext hidden text-center"
-              >
-                GOOD DESIGN{" "}
-                <div className="hidden">
-                  {" "}
-                  <span
-                    data-aos="fade-up"
-                    data-aos-duration="2600"
-                    data-aos-delay={"400"}
-                  >
-                    {" "}
-                    IS HONESTY
-                  </span>
-                </div>
-              </h2>
+            <div className="flex textwrapper gap-1 hidden w-100 column">
+              <div className="hidden">
+                {" "}
+                <h2
+                  data-aos="fade-up"
+                  data-aos-duration="900"
+                  className="text-grey Mottotext hidden text-center"
+                >
+                 RELIABLE CODE
+                </h2>
+              </div>
+              <div className="hidden">
+                <h2
+                  data-aos="fade-up"
+                  data-aos-duration="1200"
+                  data-aos-delay={"250"}
+                  className="text-secondary Mottotext hidden text-center"
+                >
+                  IS HONESTY
+                </h2>
+              </div>
             </div>
           </div>
         </div>
@@ -54,7 +55,7 @@ const WorkWrapper = styled.div`
     overflow: hidden;
   }
   @media (max-width: 780px) {
-    padding: 8rem 0;
+    padding: 5rem 0;
   }
   .imageWrapper {
     position: absolute;
@@ -86,13 +87,13 @@ const WorkWrapper = styled.div`
     font-size: 14rem;
     line-height: 120px;
     font-weight: 400;
-    width: 70%;
+    width: 90%;
     margin: 0 auto;
     letter-spacing: 0px;
     @media (max-width: 980px) {
       line-height: 100px;
       font-size: 10rem;
-      width: 70%;
+      width: 80%;
     }
 
     @media (max-width: 780px) {
@@ -100,9 +101,9 @@ const WorkWrapper = styled.div`
       font-size: 14rem;
     }
     @media (max-width: 590px) {
-      line-height: 90px;
-      font-size: 13rem;
-      width: 90%;
+      line-height: 70px;
+      font-size: 10rem;
+      width: 100%;
     }
     @media (max-width: 390px) {
       line-height: 70px;

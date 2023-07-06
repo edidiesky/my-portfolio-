@@ -36,24 +36,17 @@ export default function Footer() {
           <div className="left flex column gap-4">
             <div className="w-100 grid grid-auto">
               <ul className="flex column gap-1">
-                <li className="fs-24 family2 text-grey">Github</li>
-                <li className="fs-24 family2 text-grey">Linkedlin</li>
+                <li className="fs-24 text-grey">Github</li>
+                <li className="fs-24 text-grey">Linkedlin</li>
               </ul>
               <ul className="flex column gap-1">
-                <li className="fs-24 family2 text-grey">Twitter</li>
-                <li className="fs-24 family2 text-grey">Facebook</li>
+                <li className="fs-24 text-grey">Twitter</li>
+                <li className="fs-24 text-grey">Facebook</li>
               </ul>
               <ul className="flex column gap-3">
-                <li className="fs-12 text-bold family1 text-grey">
+                <li className="fs-12 text-bold family2 text-grey">
                   Email
-                  <span className="fs-12 block family1 text-grey2">
-                    essienedidiong1000@gmail.com
-                  </span>
-                </li>
-
-                <li className="fs-12 text-bold family1 text-grey">
-                  Phone
-                  <span className="fs-12 block family1 text-grey2">
+                  <span className="fs-10 block family2 text-grey2">
                     essienedidiong1000@gmail.com
                   </span>
                 </li>
@@ -81,6 +74,10 @@ const FooterWrapper = styled.div`
   display: grid;
   place-items: center;
   background-color: var(--primary);
+  @media (max-width: 780px) {
+  padding-top: 5rem;
+      font-size: 14px;
+    }
 
   .grid-auto {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));

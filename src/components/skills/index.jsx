@@ -18,7 +18,6 @@ export default function SkillsIndex() {
   const SkillsLeft = () => {
     return (
       <div className="left w-85 auto item-center justify-center h-100 flex column gap-1">
-  
         <div className="flex w-100 flex column gap-1">
           <h4
             style={{ fontWeight: "normal", zIndex: 2000 }}
@@ -75,6 +74,10 @@ const SkillsWrapper = styled.div`
   position: relative;
   padding: 5rem 0;
   padding-top: 15rem;
+  @media (max-width: 780px) {
+    padding-top: 7rem;
+    width: 100%;
+  }
   /* display: grid;
   place-items: center; */
   background-color: #fff;
@@ -99,6 +102,9 @@ const SkillsWrapper = styled.div`
       margin: 0 auto;
       z-index: 300;
       background-attachment: fixed;
+      @media (max-width: 780px) {
+        width: 100%;
+      }
     }
   }
 
