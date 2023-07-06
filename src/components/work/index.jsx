@@ -7,7 +7,7 @@ const workdata = [
   {
     image: "./jobit.png",
     description:
-      "The car dealership website is a platform where buyers who are interested in getting different cars can visit. A payment system using PayPal was integrated for users to carry out payments. The site provides a platform for the admin to view statistics on their sales and product created. Notwithstanding product, user and order management are also accessible for the admin",
+      "This is a clone of streaming platform. It houses a client side and a server side built with the tools below",
     tools: [
       "REACT.JS",
       "CSS",
@@ -24,7 +24,7 @@ const workdata = [
   {
     image: "./jobit.png",
     description:
-      "The car dealership website is a platform where buyers who are interested in getting different cars can visit. A payment system using PayPal was integrated for users to carry out payments. The site provides a platform for the admin to view statistics on their sales and product created. Notwithstanding product, user and order management are also accessible for the admin",
+      "This is a clone of streaming platform. It houses a client side and a server side built with the tools below",
     tools: [
       "REACT.JS",
       "CSS",
@@ -41,21 +41,20 @@ const workdata = [
   {
     image: "./jobit.png",
     description:
-      "The car dealership website is a platform where buyers who are interested in getting different cars can visit. A payment system using PayPal was integrated for users to carry out payments. The site provides a platform for the admin to view statistics on their sales and product created. Notwithstanding product, user and order management are also accessible for the admin",
+      "This is a clone of streaming platform. It houses a client side and a server side built with the tools below",
     tools: [
-      "REACT.JS",
+      "NEXT.JS",
       "CSS",
       "styled-components",
       "NODEJS",
       "EXPRESSJS",
       "MONGODB",
-      "HTML",
+      "TYPESCRIPT",
     ],
     link1: "",
     link2: "",
-    text: "Airbnb",
+    text: "Youtube",
   },
-
 ];
 
 export default function WorkIndex() {
@@ -100,74 +99,71 @@ export default function WorkIndex() {
             My Works
           </h4>
         </div>
-        <div id="cards" className="w-100 flex column">
+        <div id="cards" className="w-100 grid column gap-2">
           {workdata.map((x, index) => {
             return (
-              // <div className="card flex item-start column gap-2">
-              //   {/* <img src={x.image} alt="" className="images" /> */}
-              //   <div className="card_content flex py-2 column gap-4">
-              //     <div className="w-90 auto card_content_wrapper flex column gap-2">
-              //       <h3 className="fs-30 text-white">{x.text}</h3>
-              //       <h5 className="fs-12 family2 text-light text-grey">A clone of the airbnb website with full functionality</h5>
-              //       <div className="flex item-center tagwrapper">
-              //         <div className="btn fs-20 py-1" target="_blank">
-              //           Reactjs
-              //         </div>{" "}
-              //         <div className="btn fs-20 py-1" target="_blank">
-              //           Reactjs
-              //         </div>{" "}
-              //         <div className="btn fs-20 py-1" target="_blank">
-              //           Reactjs
-              //         </div>{" "}
-              //         <div className="btn fs-20 py-1" target="_blank">
-              //           Reactjs
-              //         </div>{" "}
-              //         <div className="btn fs-20 py-1" target="_blank">
-              //           Reactjs
-              //         </div>
-              //       </div>
-              //       <div className="w-100 btnWrapper flex item-center gap-1">
-              //         {x.link1 ? (
-              //           <Link
-              //             to={x.link1}
-              //             className="btn fs-14 family2 py-1"
-              //             target="_blank"
-              //           >
-              //             View project Demo
-              //           </Link>
-              //         ) : (
-              //           <div
-              //             className="btn text-grey fs-10 family2 py-1"
-              //             target="_blank"
-              //           >
-              //             Comming Soon
-              //           </div>
-              //         )}
+              <div className="card flex item-start column gap-2">
+                {/* <img src={x.image} alt="" className="images" /> */}
+                <div className="card_content flex py-2 column gap-4">
+                  <div className="w-90 auto card_content_wrapper flex column gap-2">
+                    <h3 className="fs-30 text-white">{x.text}</h3>
+                    <h5 className="fs-14 text-grey family1 text-light ">
+                      {x.description}
+                    </h5>
+                    <div className="flex item-center tagwrapper">
+                      {x.tools.map((x, index) => {
+                        return (
+                          <div
+                            key={index}
+                            className="btn fs-20 py-1 family1 uppercase"
+                            target="_blank"
+                          >
+                            {x}
+                          </div>
+                        );
+                      })}
+                    </div>
+                    <div className="w-100 btnWrapper flex item-center gap-1">
+                      {x.link1 ? (
+                        <Link
+                          to={x.link1}
+                          className="btn fs-16 family1 py-1"
+                          target="_blank"
+                        >
+                          View project Demo
+                        </Link>
+                      ) : (
+                        <div
+                          className="btn text-grey fs-16 family1 py-1"
+                          target="_blank"
+                        >
+                          Comming Soon
+                        </div>
+                      )}
 
-              //         <Link
-              //           to={"https://github.com/Vivixell/portfolioVictorRobin"}
-              //           className="btn text-grey fs-10 family2 py-1"
-              //           target="_blank"
-              //         >
-              //           View project Code
-              //         </Link>
-              //       </div>
-              //       {/* <p className="family2 text-grey fs-10 text-light">{x.description}</p> */}
-              //     </div>
-              //   </div>
-              //   <div className="card_border"></div>
+                      <Link
+                        to={"https://github.com/Vivixell/portfolioVictorRobin"}
+                        className="btn text-grey fs-16 family1 py-1"
+                        target="_blank"
+                      >
+                        View project Code
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+                <div className="card_border"></div>
 
-              //   {/* <img src={x.image} alt="" className="images" /> */}
-              // </div>
-              <h2
-                key={index}
-                data-aos="fade-up"
-                data-aos-duration="1000"
-                data-aos-delay={index * 250}
-                className="text-grey w-100 uppercase text-start"
-              >
-                <TextIndex x={x.text} />
-              </h2>
+                {/* <img src={x.image} alt="" className="images" /> */}
+              </div>
+              // <h2
+              // //   key={index}
+              // //   data-aos="fade-up"
+              // //   data-aos-duration="1000"
+              // //   data-aos-delay={index * 250}
+              // //   className="text-grey w-100 uppercase text-start"
+              // // >
+              // //   <TextIndex x={x.text} />
+              // // </h2>
             );
           })}
         </div>
@@ -211,7 +207,7 @@ const SkillsWrapper = styled.div`
     }
   }
   .card {
-    min-height: 320px;
+    min-height: 350px;
     width: 100%;
     position: relative;
     border-radius: 10px;
@@ -285,6 +281,7 @@ const SkillsWrapper = styled.div`
     h3 {
       letter-spacing: 1px;
       font-weight: normal;
+      font-size: 50px;
     }
   }
 
@@ -303,7 +300,7 @@ const SkillsWrapper = styled.div`
     font-size: 120px;
     padding: 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.09);
-   
+
     @media (max-width: 980px) {
       font-size: 8rem;
     }
