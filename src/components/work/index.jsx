@@ -181,11 +181,16 @@ const SkillsWrapper = styled.div`
   .tagwrapper {
     flex-wrap: wrap;
     gap: 0.5rem;
+    z-index: 30000;
     .btn {
       padding: 0.5rem 1rem;
       color: #fff;
-      font-size: 10px;
+      font-size: 9px;
+      z-index: 30000;
       letter-spacing: 2px;
+      &:hover {
+        color: var(--dark-1);
+      }
       @media (max-width: 480px) {
         font-size: 10px;
       }
@@ -232,7 +237,7 @@ const SkillsWrapper = styled.div`
     margin: 1px;
     z-index: 20;
   }
-  .card:nth-child(1) > .card_content {
+  .card > .card_content {
     background-image: radial-gradient(
       800px circle at 100px 100px,
       rgba(255, 255, 255, 0.06) 100px,
@@ -258,7 +263,7 @@ const SkillsWrapper = styled.div`
       rgba(255, 255, 255, 0.06) 100px,
       transparent 40%
     );
-    z-index: 30;
+    z-index: 10;
     opacity: 0;
     transition: all 0.5s;
   }

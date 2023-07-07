@@ -49,8 +49,8 @@ export default function App() {
         },
       })
       .to(".overlay", {
-        delay: 1,
-        duration: 1.2,
+        delay: .3,
+        duration: 1,
         opacity: 0,
         visibility: "hidden",
         ease: "easeOutExpo",
@@ -63,7 +63,7 @@ export default function App() {
           skewY: 0,
           y: 0,
           duration: 1,
-          delay: 1,
+          delay: .1,
           // ease: "elastic.out(1, 0.5)",
           ease: "easeOutExpo",
           stagger: {
@@ -73,11 +73,11 @@ export default function App() {
       )
       .to(".char", {
         y: 0,
-        delay: .4,
-        duration: 1.7,
+        delay: .2,
+        duration: .8,
         ease: "easeOutExpo",
         stagger: {
-          amount: 0.5,
+          amount: 0.4,
         },
       }); // Final skewY value and duration);
     AOS.init({

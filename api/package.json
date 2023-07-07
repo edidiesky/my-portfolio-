@@ -1,13 +1,13 @@
 {
-  "name": "car",
+  "name": "api",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
   "type": "module",
+  "main": "server.js",
   "scripts": {
     "server": "node server.js ",
     "client": "npm run dev --prefix ../dist",
-    "start": "concurrently --kill-others-on-fail \"npm run server\"",
+    "start": "npm run server",
     "data:import": "node seeder",
     "data:destroy": "node seeder -d"
   },
