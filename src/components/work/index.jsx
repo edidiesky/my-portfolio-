@@ -1,12 +1,22 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import TextIndex from "../common/Text";
 
 const workdata = [
   {
+    image:
+      "https://kalanidhithemes.com/live-preview/landing-page/delici/img/p5.jpg",
     description:
       "This is a clone of streaming platform. It houses a client side and a server side built with the tools below",
+    tools: ["NEXT.JS", "CSS", "styled-components"],
+    link1: "",
+    link2: "https://github.com/edidiesky/airbnb",
+    text: "Restaurant Landing Page",
+  },
+  {
+    image: "./cloning_2.jpg",
+    description:
+      "This is a clone of the  rental platform, Airbnb. It houses a client side and a server side built with the tools below. ",
     tools: [
       "REACT.JS",
       "CSS",
@@ -15,11 +25,12 @@ const workdata = [
       "EXPRESSJS",
       "MONGODB",
     ],
-    link1: "",
+    link1: "https://airbnb-wa21.onrender.com",
     link2: "https://github.com/edidiesky/airbnb",
     text: "Airbnb",
   },
   {
+    image: "./cloning_2.jpg",
     description:
       "This is a clone of streaming platform. It houses a client side and a server side built with the tools below",
     tools: [
@@ -35,6 +46,7 @@ const workdata = [
     text: "Fiverr",
   },
   {
+    image: "./cloning_2.jpg",
     description:
       "This is a clone of streaming platform. It houses a client side and a server side built with the tools below",
     tools: [
@@ -48,36 +60,11 @@ const workdata = [
     ],
     link1: "",
     link2: "https://github.com/edidiesky/airbnb",
-    text: "Youtube",
+    text: "Car Dealer",
   },
 ];
 
 export default function WorkIndex() {
-  const handleMouseMove = (e) => {
-    const { currentTarget: target } = e;
-    const x = e.clientX - target.getBoundingClientRect().left;
-    const y = e.clientY - target.getBoundingClientRect().top;
-
-    target.style.setProperty("--mouse-x", `${x}px`);
-    target.style.setProperty("--mouse-y", `${y}px`);
-  };
-  useEffect(() => {
-    // get all the cards
-    const cards = document.querySelectorAll(".card");
-    document.getElementById("cards").onmousemove = (e) => {
-      cards.forEach((card) => {
-        card.addEventListener("mousemove", handleMouseMove);
-      });
-    };
-
-    return () => {
-      document.getElementById("cards").onmousemove = (e) => {
-        cards.forEach((card) => {
-          card.removeEventListener("mousemove", handleMouseMove);
-        });
-      };
-    };
-  }, []);
   return (
     <SkillsWrapper id="Work">
       <div className="left w-85 auto h-100 flex column gap-3">
@@ -94,15 +81,29 @@ export default function WorkIndex() {
             My Works
           </h4>
         </div>
-        <div id="cards" className="w-100 grid column gap-2">
+        <div id="cards" className="w-100 cardWrapper flex column gap-4">
           {workdata.map((x, index) => {
             return (
-              <div className="card flex item-start column gap-2">
-                {/* <img src={x.image} alt="" className="images" /> */}
-                <div className="card_content flex py-2 column gap-4">
+              <div className="card flex item-start gap-2">
+                <div
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  className="flex-1"
+                >
+                  <img src={x.image} alt="" className="images W-100" />
+                </div>
+                <div
+                  data-aos="fade-up"
+                  data-aos-duration="1200"
+                  data-aos-delay={"300"}
+                  className="card_content flex-1 flex py-2 column gap-4"
+                >
                   <div className="w-90 auto card_content_wrapper flex column gap-2">
-                    <h3 className="fs-30 text-white">{x.text}</h3>
-                    <h5 className="fs-14 text-grey family1 text-light ">
+                    <h3 className="fs-30 text-grey">{x.text}</h3>
+                    <h5
+                      style={{ lineHeight: "1.4" }}
+                      className="fs-16 text-grey family2 text-light "
+                    >
                       {x.description}
                     </h5>
                     <div className="flex item-center tagwrapper">
@@ -149,19 +150,7 @@ export default function WorkIndex() {
                     </div>
                   </div>
                 </div>
-                <div className="card_border"></div>
-
-                {/* <img src={x.image} alt="" className="images" /> */}
               </div>
-              // <h2
-              // //   key={index}
-              // //   data-aos="fade-up"
-              // //   data-aos-duration="1000"
-              // //   data-aos-delay={index * 250}
-              // //   className="text-grey w-100 uppercase text-start"
-              // // >
-              // //   <TextIndex x={x.text} />
-              // // </h2>
             );
           })}
         </div>
@@ -212,37 +201,23 @@ const SkillsWrapper = styled.div`
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
   }
+  .cardWrapper {
+    gap: 8rem;
+  }
   .card {
     min-height: 350px;
     width: 100%;
     position: relative;
     border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.07);
-    border: 1px solid rgba(255, 255, 255, 0.03);
-    z-index: 3000;
-    /* transform: all 0.6s; */
-  }
-
-  #cards:hover > .card > .card_border {
-    opacity: 1;
-  }
-  .card:hover::before {
-    opacity: 1;
-  }
-  .card > .card_content {
-    width: calc(100% - 2px);
-    height: calc(100% - 2px);
-    background-color: rgb(15, 15, 15);
-    border-radius: inherit;
-    margin: 1px;
-    z-index: 20;
-  }
-  .card > .card_content {
-    background-image: radial-gradient(
-      800px circle at 100px 100px,
-      rgba(255, 255, 255, 0.06) 100px,
-      transparent 40%
-    );
+    &:nth-of-type(even) {
+      flex-direction: row-reverse;
+    }
+    @media (max-width: 780px) {
+      flex-direction: column;
+      &:nth-of-type(even) {
+        flex-direction: column;
+      }
+    }
   }
   .images {
     height: 100%;
@@ -276,18 +251,10 @@ const SkillsWrapper = styled.div`
     cursor: pointer;
     z-index: 3000000;
   }
-  .card > .card_border {
-    background-image: radial-gradient(
-      400px circle at var(--mouse-x) var(--mouse-y),
-      rgba(255, 255, 255, 0.1) 100px,
-      transparent 40%
-    );
-    z-index: 10;
-  }
   .card_content_wrapper {
     justify-content: flex-end;
     height: 100%;
-    padding: 3rem 1rem;
+    padding: 3rem 0;
     h3 {
       letter-spacing: 1px;
       font-weight: normal;
