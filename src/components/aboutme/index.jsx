@@ -46,8 +46,8 @@ export default function AboutMeIndex() {
 const SkillsWrapper = styled.div`
   width: 100%;
   position: relative;
-  padding: 5rem 0;
-  padding-top: 10rem;
+  padding: 15rem 0;
+  /* padding-top: 15rem; */
   transform-style: inherit;
   /* background-color: rgb(13, 13, 13); */
   /* min-height: 100vh; */

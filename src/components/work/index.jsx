@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import Button from "../common/button";
 
 const workdata = [
   {
@@ -108,17 +109,9 @@ export default function WorkIndex() {
                       >
                         {x.description}
                       </h5>
-                      <div className="flex item-center tagwrapper">
+                      <div className="flex fs-10 item-center gap-1 tagwrapper">
                         {x.tools.map((x, index) => {
-                          return (
-                            <div
-                              key={index}
-                              className="btn py-1 family1 uppercase"
-                              target="_blank"
-                            >
-                              {x}
-                            </div>
-                          );
+                          return <Button type={'tag'} text={x} />;
                         })}
                       </div>
                       <div
@@ -134,15 +127,15 @@ export default function WorkIndex() {
                             View project Demo
                           </Link>
                         ) : (
-                          <div
-                            className="btn text-grey fs-16 family1 py-1"
-                            target="_blank"
-                          >
-                            Comming Soon
+                          <div className="flex-1">
+                            <Button text={"View Project code"} />
                           </div>
                         )}
+                        <div className="flex-1">
+                          <Button text={"View Project code"} />
+                        </div>
 
-                        <Link
+                        {/* <Link
                           to={
                             "https://github.com/Vivixell/portfolioVictorRobin"
                           }
@@ -150,7 +143,7 @@ export default function WorkIndex() {
                           target="_blank"
                         >
                           View project Code
-                        </Link>
+                        </Link> */}
                       </div>
                     </div>
                   </div>
@@ -174,7 +167,7 @@ const SkillsWrapper = styled.div`
   transform-style: inherit;
   .tagwrapper {
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 1rem;
     z-index: 30000;
     .btn {
       padding: 0.5rem 1rem;
