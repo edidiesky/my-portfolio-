@@ -30,7 +30,7 @@ const workdata = [
     text: "Airbnb",
   },
   {
-    image: "./cloning_2.jpg",
+    image: "./fiverr.png",
     description:
       "This is a clone of streaming platform. It houses a client side and a server side built with the tools below",
     tools: [
@@ -45,23 +45,23 @@ const workdata = [
     link2: "https://github.com/edidiesky/fiverrClone_1-",
     text: "Fiverr",
   },
-  {
-    image: "./cloning_2.jpg",
-    description:
-      "This is a clone of streaming platform. It houses a client side and a server side built with the tools below",
-    tools: [
-      "NEXT.JS",
-      "CSS",
-      "styled-components",
-      "NODEJS",
-      "EXPRESSJS",
-      "MONGODB",
-      "TYPESCRIPT",
-    ],
-    link1: "",
-    link2: "https://github.com/edidiesky/airbnb",
-    text: "Car Dealer",
-  },
+  // {
+  //   image: "./cloning_2.jpg",
+  //   description:
+  //     "This is a clone of streaming platform. It houses a client side and a server side built with the tools below",
+  //   tools: [
+  //     "NEXT.JS",
+  //     "CSS",
+  //     "styled-components",
+  //     "NODEJS",
+  //     "EXPRESSJS",
+  //     "MONGODB",
+  //     "TYPESCRIPT",
+  //   ],
+  //   link1: "",
+  //   link2: "https://github.com/edidiesky/airbnb",
+  //   text: "Car Dealer",
+  // },
 ];
 
 export default function WorkIndex() {
@@ -84,69 +84,74 @@ export default function WorkIndex() {
         <div id="cards" className="w-100 cardWrapper flex column gap-4">
           {workdata.map((x, index) => {
             return (
-              <div className="card flex item-start gap-2">
+              <div className="card flex item-center gap-2">
                 <div
                   data-aos="fade-up"
-                  data-aos-duration="1000"
+                  data-aos-duration="1200"
+                  data-aos-delay="200"
                   className="flex-1"
                 >
                   <img src={x.image} alt="" className="images W-100" />
                 </div>
-                <div
-                  data-aos="fade-up"
-                  data-aos-duration="1200"
-                  data-aos-delay={"300"}
-                  className="card_content flex-1 flex py-2 column gap-4"
-                >
-                  <div className="w-90 auto card_content_wrapper flex column gap-2">
-                    <h3 className="fs-30 text-grey">{x.text}</h3>
-                    <h5
-                      style={{ lineHeight: "1.4" }}
-                      className="fs-16 text-grey family2 text-light "
-                    >
-                      {x.description}
-                    </h5>
-                    <div className="flex item-center tagwrapper">
-                      {x.tools.map((x, index) => {
-                        return (
-                          <div
-                            key={index}
-                            className="btn py-1 family1 uppercase"
+                <div className="flex-1 hidden">
+                  <div
+                    data-aos="fade-up"
+                    data-aos-duration="2400"
+                    data-aos-delay={"300"}
+                    className="card_content flex-1 flex py-2 column gap-4"
+                  >
+                    <div className="w-90 auto card_content_wrapper flex column gap-2">
+                      <h3 className="fs-30 text-grey">{x.text}</h3>
+                      <h5
+                        style={{ lineHeight: "1.4" }}
+                        className="fs-16 text-grey family2 text-light "
+                      >
+                        {x.description}
+                      </h5>
+                      <div className="flex item-center tagwrapper">
+                        {x.tools.map((x, index) => {
+                          return (
+                            <div
+                              key={index}
+                              className="btn py-1 family1 uppercase"
+                              target="_blank"
+                            >
+                              {x}
+                            </div>
+                          );
+                        })}
+                      </div>
+                      <div
+                        style={{ flexWrap: "wrap" }}
+                        className="w-100 btnWrapper flex item-center gap-1"
+                      >
+                        {x.link1 ? (
+                          <Link
+                            to={x.link1}
+                            className="btn fs-16 family1 py-1"
                             target="_blank"
                           >
-                            {x}
+                            View project Demo
+                          </Link>
+                        ) : (
+                          <div
+                            className="btn text-grey fs-16 family1 py-1"
+                            target="_blank"
+                          >
+                            Comming Soon
                           </div>
-                        );
-                      })}
-                    </div>
-                    <div
-                      style={{ flexWrap: "wrap" }}
-                      className="w-100 btnWrapper flex item-center gap-1"
-                    >
-                      {x.link1 ? (
+                        )}
+
                         <Link
-                          to={x.link1}
-                          className="btn fs-16 family1 py-1"
-                          target="_blank"
-                        >
-                          View project Demo
-                        </Link>
-                      ) : (
-                        <div
+                          to={
+                            "https://github.com/Vivixell/portfolioVictorRobin"
+                          }
                           className="btn text-grey fs-16 family1 py-1"
                           target="_blank"
                         >
-                          Comming Soon
-                        </div>
-                      )}
-
-                      <Link
-                        to={"https://github.com/Vivixell/portfolioVictorRobin"}
-                        className="btn text-grey fs-16 family1 py-1"
-                        target="_blank"
-                      >
-                        View project Code
-                      </Link>
+                          View project Code
+                        </Link>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -183,6 +188,12 @@ const SkillsWrapper = styled.div`
       @media (max-width: 480px) {
         font-size: 10px;
       }
+    }
+  }
+  .hidden {
+    @media (max-width: 580px) {
+      width: 100%;
+      overflow: visible !important;
     }
   }
 
@@ -225,23 +236,6 @@ const SkillsWrapper = styled.div`
     object-fit: cover;
     z-index: 20;
   }
-  .card::before,
-  .card > .card_border {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: inherit;
-    content: "";
-    top: 0;
-    background-image: radial-gradient(
-      800px circle at var(--mouse-x) var(--mouse-y),
-      rgba(255, 255, 255, 0.06) 100px,
-      transparent 40%
-    );
-    z-index: 10;
-    opacity: 0;
-    transition: all 0.5s;
-  }
   .btn {
     padding: 0.9rem 1.8rem;
     border-radius: 40px;
@@ -259,6 +253,14 @@ const SkillsWrapper = styled.div`
       letter-spacing: 1px;
       font-weight: normal;
       font-size: 50px;
+      @media (max-width: 780px) {
+        font-size: 35px;
+      }
+    }
+    h5 {
+      @media (max-width: 480px) {
+        font-size: 14px;
+      }
     }
   }
 

@@ -87,6 +87,16 @@ const SkillsWrapper = styled.div`
     z-index: 3000;
     background-color: transparent;
   }
+  .image {
+    background-size: cover;
+    background-image: url("chat_1.jpg");
+    position: absolute;
+    background-position: center;
+    width: 100%;
+    z-index: -1;
+    height: 100%;
+    background-attachment: fixed;
+  }
 
   .imageWrapper {
     position: absolute;

@@ -7,7 +7,7 @@ import TextIndex from "../common/Text";
 
 export default function AboutMeIndex() {
   return (
-    <SkillsWrapper id="about">
+    <SkillsWrapper id="about" className="flex item-center justify-center gap-2">
       {/* <div className="imageWrapper">
         <img
           src="https://minhpham.design/assets/images/planet-1-1.png"
@@ -46,13 +46,11 @@ export default function AboutMeIndex() {
 const SkillsWrapper = styled.div`
   width: 100%;
   position: relative;
-  display: grid;
-  place-items: center;
-  padding: 10rem 0;
-  padding-top: 15rem;
+  padding: 5rem 0;
+  padding-top: 10rem;
   transform-style: inherit;
   /* background-color: rgb(13, 13, 13); */
-  min-height: 100vh;
+  /* min-height: 100vh; */
   .line .span {
     position: absolute;
     top: 0;

@@ -86,14 +86,7 @@ export default function Layout() {
         {/* <SidebarIndex /> */}
         <div className=" wrapperlink flex column gap-2">
           <Link
-            to={"https://github.com/Vivixell/portfolioVictorRobin"}
-            target="_blank"
-            className="social"
-          >
-            <BsGithub color="var(--grey-1)" />
-          </Link>
-          <Link
-            to={"https://github.com/Vivixell/portfolioVictorRobin"}
+            to={"https://github.com/edidiesky"}
             target="_blank"
             className="social"
           >
@@ -101,7 +94,7 @@ export default function Layout() {
           </Link>
           <Link
             to={
-              "https://twitter.com/DevtorCode/status/1660742554789335074?s=20"
+              "https://twitter.com/edidiesky"
             }
             target="_blank"
             className="social"
@@ -109,7 +102,7 @@ export default function Layout() {
             <BsTwitter color="var(--grey-1)" />
           </Link>
           <Link
-            to={"https://linkedin.com/in/robinvictoro"}
+            to={"https://www.linkedin.com/in/edidiong-essien-a4b59b1a5/"}
             target="_blank"
             className="social"
           >

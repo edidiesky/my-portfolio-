@@ -19,9 +19,19 @@ button {
   font-family: inherit;
 }
 
+[data-aos="fade-up"] {
+  transform: translate3d(0, 240px, 0) !important;
+}
+[data-aos="fade-up"].aos-animate {
+  transform: translate3d(0, 0, 0) !important;
+
+}
+
 .wrapper {
   background-color: var(--primary);
 }
+
+
 .wrapper {
   /* position: absolute; */
   width: 100vw;
