@@ -24,7 +24,7 @@ const Button = ({ text, subtext, type }) => {
 
 const ButtonWrapper = styled.button`
   border: 1px solid var(--grey-1);
-  padding: 1.2rem 2.8rem;
+  padding: 1rem 2rem;
   font-size: inherit;
   letter-spacing: 3px;
   font-weight: 600;

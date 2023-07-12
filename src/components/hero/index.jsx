@@ -17,7 +17,7 @@ export default function HeroIndex() {
 
   return (
     <WorkWrapper>
-      <div className="w-85 auto flex item-center gap-6 justify-space">
+      <div className="w-85 auto">
         <div className="w-100 hero">
           <div className="left w-100 h-100 flex justify-center item-center column gap-2">
             <div className="hidden">

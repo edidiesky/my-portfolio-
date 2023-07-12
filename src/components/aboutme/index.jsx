@@ -15,7 +15,7 @@ export default function AboutMeIndex() {
           alt=""
         />
       </div> */}
-      <div className="left w-85 auto h-100 flex column">
+      <div className="left w-85 auto h-100 flex column gap-4">
         <div className="w-100">
           <h4
             style={{ fontWeight: "normal" }}
@@ -33,7 +33,7 @@ export default function AboutMeIndex() {
           <h2 className="family1 fs-60 text-extra-bold text-grey">
             <TextIndex
               x={
-                "  I am a full stack web developer with a keen focus to produce high quality product and an impactful user experience"
+                "  I am a full stack web developer with a keen focus in helping organizations products stand distinctively by producing high quality product and an impactful user experience"
               }
             />
           </h2>

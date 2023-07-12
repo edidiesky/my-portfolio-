@@ -115,24 +115,20 @@ export default function WorkIndex() {
                         })}
                       </div>
                       <div
-                        style={{ flexWrap: "wrap" }}
-                        className="w-100 btnWrapper flex item-center gap-1"
+                        style={{ flexWrap: "wrap",gap:"1rem" }}
+                        className="w-100 btnWrapper flex item-center"
                       >
                         {x.link1 ? (
-                          <Link
-                            to={x.link1}
-                            className="btn fs-16 family1 py-1"
-                            target="_blank"
-                          >
-                            View project Demo
-                          </Link>
+                          <div className="">
+                          <Button text={"Comming soon"} />
+                        </div>
                         ) : (
-                          <div className="flex-1">
-                            <Button text={"View Project code"} />
+                          <div className="">
+                            <Button text={"Comming soon"} />
                           </div>
                         )}
-                        <div className="flex-1">
-                          <Button text={"View Project code"} />
+                        <div className="">
+                          <Button text={"Project code"} />
                         </div>
 
                         {/* <Link
