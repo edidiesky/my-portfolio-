@@ -11,7 +11,7 @@ export default function AboutMeIndex() {
       {/* <div className="imageWrapper">
         <img
           src="https://minhpham.design/assets/images/planet-1-1.png"
-          className="w-100 h-100"
+          className="w-100 h-100"he
           alt=""
         />
       </div> */}
@@ -30,7 +30,7 @@ export default function AboutMeIndex() {
           </h4>
         </div>
         <div className="w-100">
-          <h2 className="family1 fs-60 text-extra-bold text-grey">
+          <h2 className="family3 fs-60 text-grey">
             <TextIndex
               x={
                 "  I am a full stack web developer with a keen focus in helping organizations products stand distinctively by producing high quality product and an impactful user experience"
@@ -69,6 +69,7 @@ const SkillsWrapper = styled.div`
   h2 {
     font-size: 56px;
     line-height: 1.1;
+    font-weight: 700;
     @media (max-width: 980px) {
       font-size: 4.8rem;
     }
