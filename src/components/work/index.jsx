@@ -105,23 +105,33 @@ export default function WorkIndex() {
                       <h3 className="fs-30 text-grey">{x.text}</h3>
                       <h5
                         style={{ lineHeight: "1.4" }}
-                        className="fs-16 text-grey family2 text-light "
+                        className="fs-16 text-grey family3 text-light "
                       >
                         {x.description}
                       </h5>
-                      <div className="flex fs-10 item-center gap-1 tagwrapper">
+                      <div className="flex fs-10 item-center justify-end gap-1 tagwrapper">
                         {x.tools.map((x, index) => {
-                          return <Button type={'tag'} text={x} />;
+                          return (
+                            <div
+                              style={{
+                                fontSize: "1.4rem",
+                                letterSpacing: "4px",
+                              }}
+                              className="fs-14 text-light text-grey uppercase text-light"
+                            >
+                              {x}
+                            </div>
+                          );
                         })}
                       </div>
                       <div
-                        style={{ flexWrap: "wrap",gap:"1rem" }}
+                        style={{ flexWrap: "wrap", gap: "1rem" }}
                         className="w-100 btnWrapper flex item-center"
                       >
                         {x.link1 ? (
                           <div className="">
-                          <Button text={"Comming soon"} />
-                        </div>
+                            <Button text={"Comming soon"} />
+                          </div>
                         ) : (
                           <div className="">
                             <Button text={"Comming soon"} />
@@ -165,6 +175,7 @@ const SkillsWrapper = styled.div`
     flex-wrap: wrap;
     gap: 1rem;
     z-index: 30000;
+    justify-content: flex-end;
     .btn {
       padding: 0.5rem 1rem;
       color: #fff;
@@ -204,6 +215,10 @@ const SkillsWrapper = styled.div`
   .cardWrapper {
     gap: 8rem;
   }
+  h3,
+  h5 {
+    text-align: end;
+  }
   .card {
     min-height: 350px;
     width: 100%;
@@ -211,6 +226,15 @@ const SkillsWrapper = styled.div`
     border-radius: 10px;
     &:nth-of-type(even) {
       flex-direction: row-reverse;
+
+      .btnWrapper,.tagwrapper {
+        padding: 1.5rem 0;
+        justify-content: flex-start;
+      }
+      h3,
+      h5 {
+        text-align: start;
+      }
     }
     @media (max-width: 780px) {
       flex-direction: column;
@@ -234,6 +258,10 @@ const SkillsWrapper = styled.div`
     cursor: pointer;
     z-index: 3000000;
   }
+  .btnWrapper {
+    padding: 1.5rem 0;
+    justify-content: flex-end;
+  }
   .card_content_wrapper {
     justify-content: flex-end;
     height: 100%;
@@ -242,6 +270,7 @@ const SkillsWrapper = styled.div`
       letter-spacing: 1px;
       font-weight: normal;
       font-size: 50px;
+
       @media (max-width: 780px) {
         font-size: 35px;
       }

@@ -3,12 +3,9 @@ import { Route, Routes } from "react-router-dom";
 import SplitType from "split-type";
 import "pace-js/themes/yellow/pace-theme-minimal.css";
 import gsap from "gsap";
-import AOS from "aos";
 import "aos/dist/aos.css";
 import "animate.css";
 import { Layout } from "./screens";
-import Cursor from "./components/common/cursor";
-import HeroIndex from "./components/hero";
 
 export default function App() {
   const [count, setCount] = useState(0);
@@ -40,7 +37,7 @@ export default function App() {
       //   ease: "expo.inOut",
       // })
       .to(".bar", {
-        height: '126vh',
+        height: "126vh",
         delay: 0.8,
         duration: 0.9,
         ease: "easeOutExpo",
@@ -49,7 +46,7 @@ export default function App() {
         },
       })
       .to(".overlay", {
-        delay: .3,
+        delay: 0.3,
         duration: 1,
         opacity: 0,
         visibility: "hidden",
@@ -63,7 +60,7 @@ export default function App() {
           skewY: 0,
           y: 0,
           duration: 1,
-          delay: .1,
+          delay: 0.1,
           // ease: "elastic.out(1, 0.5)",
           ease: "easeOutExpo",
           stagger: {
@@ -73,25 +70,18 @@ export default function App() {
       )
       .to(".char", {
         y: 0,
-        delay: .2,
-        duration: .8,
+        delay: 0.2,
+        duration: 0.8,
         ease: "easeOutExpo",
         stagger: {
           amount: 0.4,
         },
       }); // Final skewY value and duration);
-    AOS.init({
-      // once: true,
-      duration: 4000,
-    });
+
   }, []);
   const [height, setHeight] = useState(0);
   return (
     <div className="based" style={{ height }}>
-      {/* <Cursor /> */}
-      {/* <h1 ref={counterref} className="counter text-white">
-        {count}
-      </h1> */}
       <div className="overlay">
         <div className="bar"></div>
         <div className="bar"></div>

@@ -24,11 +24,11 @@ const Button = ({ text, subtext, type }) => {
 
 const ButtonWrapper = styled.button`
   border: 1px solid var(--grey-1);
-  padding: 1rem 2rem;
-  font-size: inherit;
+  padding: 1.7rem 2.5rem;
+  font-size: 1.1rem;
   letter-spacing: 3px;
   font-weight: 600;
-  border-radius: 40px;
+  border-radius: 4px;
   color: var(--grey-1);
   text-transform: uppercase;
   background-color: transparent;
@@ -38,6 +38,8 @@ const ButtonWrapper = styled.button`
   &.tag {
     padding: 1rem 1.4rem;
     font-size: 8px;
+  border-radius: 40px;
+
   }
   &:is(:hover, :focus-visible)::before {
     bottom: -50%;

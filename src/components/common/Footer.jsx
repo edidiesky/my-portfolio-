@@ -20,7 +20,11 @@ export default function Footer() {
           </div>
         </div>
         <div className="grid_wrapper w-85 auto" style={{ paddingTop: "4rem" }}>
-          <div className="flex column gap-2"></div>
+          <div className="flex column gap-2">
+            {/* contact form */}
+            
+          </div>
+          {/* contact list */}
           <div className="flex column gap-4">
             <div className="flex column gap-2">
               <h4 className="text-grey" style={{ fontSize: "9px" }}>

@@ -8,9 +8,6 @@ import { Link } from "react-router-dom";
 import SmallSidebar from "./sidebar/SmallSidebar";
 import AboutIndex from "../components/about";
 import SkillsIndex from "../components/skills";
-import Work from "../components/work";
-import Contactindex from "../components/contact";
-import Header from "../components/common/Header";
 
 import Message from "../components/loaders/Message";
 import HeroIndex from "../components/hero";
@@ -18,6 +15,10 @@ import AboutMeIndex from "../components/aboutme";
 import { Footer } from "../components/common";
 import WorkIndex from "../components/work";
 import MottoIndex from "../components/motto";
+import LocomotiveScroll from "locomotive-scroll";
+import { useRef } from "react";
+import ScrollWrapper from './scrollwrapper'
+import Aos from "aos";
 const LayoutWrapper = styled.div`
   width: 100%;
   display: flex;
@@ -27,7 +28,7 @@ const LayoutWrapper = styled.div`
   .social {
     svg {
       font-size: 20px;
-      @media (max-width:780px) {
+      @media (max-width: 780px) {
         font-size: 16px;
       }
     }
@@ -37,12 +38,12 @@ const LayoutWrapper = styled.div`
     top: 6%;
     right: 5%;
     z-index: 30000;
-    gap: .5rem;
+    gap: 0.5rem;
     justify-content: flex-end;
     .linktext2 {
       font-weight: 700;
-      transition: all .6s;
-      @media (max-width:480px) {
+      transition: all 0.6s;
+      @media (max-width: 480px) {
         font-size: 10px;
       }
       &:hover {
@@ -74,15 +75,39 @@ const data = [
 export default function Layout() {
   const [height, setHeight] = useState(0);
 
+  const scrollRef = useRef(null);
+
+  // useEffect(() => {
+  //   const scrollInstance = new LocomotiveScroll({
+  //     el: scrollRef.current,
+  //     smooth: true,
+  //     // Additional options can be added here
+  //   });
+
+  //   return () => {
+  //     scrollInstance.destroy();
+  //   };
+  // }, []);
+  
+  useEffect(() => {
+
+    Aos.init({
+      // once: true,
+      duration:4000
+    });
+  }, []);
+
+
   useEffect(() => {
     const container = document.querySelector(".based");
     const height = container.getBoundingClientRect().height;
     setHeight(height);
+    Aos.refresh(); // Refresh AOS animations
   }, []);
 
   return (
     <LayoutWrapper className="based" style={{ height }}>
-      <div className="LayoutContainer">
+      <div ref={scrollRef} className="LayoutContainer">
         {/* <SidebarIndex /> */}
         <div className=" wrapperlink flex column gap-2">
           <Link
@@ -93,9 +118,7 @@ export default function Layout() {
             <BsGithub color="var(--grey-1)" />
           </Link>
           <Link
-            to={
-              "https://twitter.com/edidiesky"
-            }
+            to={"https://twitter.com/edidiesky"}
             target="_blank"
             className="social"
           >
@@ -135,7 +158,7 @@ export default function Layout() {
           <AboutIndex />
           <WorkIndex />
           <SkillsIndex />
-          <MottoIndex/>
+          <MottoIndex />
           <Footer />
         </div>
       </div>
