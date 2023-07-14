@@ -20,7 +20,7 @@ button {
 }
 
 [data-aos="fade-up"] {
-  transform: translate3d(0, 240px, 0) !important;
+  transform: translate3d(0, 170px, 0) !important;
 }
 [data-aos="fade-up"].aos-animate {
   transform: translate3d(0, 0, 0) !important;
@@ -59,6 +59,13 @@ body {
   font-weight: normal;
   position: relative;
 }
+
+@font-face {
+  font-family: 'CustomFont';
+  src: url('./assets/custom.woff') format('woff'),
+       url('./assets/custom_2.woff') format('woff');
+}
+
 
 /* .layout {
   min-height: 100vh;
@@ -308,7 +315,7 @@ p {
   font-family: "Lora", sans-serif;
 }
 .family3 {
-  font-family: "Work Sans", sans-serif;
+  font-family: "CustomFont", sans-serif;
 }
 h4 {
   font-size: 12px;

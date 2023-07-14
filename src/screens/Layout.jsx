@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { BsGithub, BsTwitter } from "react-icons/bs";
 import { Link as Links } from "react-scroll";
 
-import { AiFillLinkedin } from "react-icons/ai";
+import { FaLinkedinIn } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import SmallSidebar from "./sidebar/SmallSidebar";
 import AboutIndex from "../components/about";
@@ -27,7 +27,7 @@ const LayoutWrapper = styled.div`
   background-color: rgb(51, 51, 51);
   .social {
     svg {
-      font-size: 20px;
+      font-size: 16px;
       @media (max-width: 780px) {
         font-size: 16px;
       }
@@ -129,7 +129,7 @@ export default function Layout() {
             target="_blank"
             className="social"
           >
-            <AiFillLinkedin color="var(--grey-1)" />
+            <FaLinkedinIn color="var(--grey-1)" />
           </Link>
         </div>
         <Message />
@@ -143,7 +143,7 @@ export default function Layout() {
                 spy={true}
                 smooth={true}
                 duration={1000}
-                className="linktext2 family1 linktext1 text-extra-bold fs-12 text-grey text-light"
+                className="linktext2 family3 linktext1 text-extra-bold fs-12 text-grey text-light"
                 to={`${x.path}`}
                 key={x.id}
               >
