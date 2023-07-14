@@ -20,7 +20,7 @@ button {
 }
 
 [data-aos="fade-up"] {
-  transform: translate3d(0, 170px, 0) !important;
+  transform: translate3d(0, 140px, 0) !important;
 }
 [data-aos="fade-up"].aos-animate {
   transform: translate3d(0, 0, 0) !important;
@@ -59,13 +59,6 @@ body {
   font-weight: normal;
   position: relative;
 }
-
-@font-face {
-  font-family: 'CustomFont';
-  src: 
-       url('./assets/custom-3.woff') format('woff');
-}
-
 
 /* .layout {
   min-height: 100vh;
@@ -315,14 +308,14 @@ p {
   font-family: "Lora", sans-serif;
 }
 .family3 {
-  font-family: "CustomFont", sans-serif;
+  font-family: "Work Sans", sans-serif;
 }
 h4 {
-  font-size: 14px;
+  font-size: 12px;
   letter-spacing: 8px;
   font-weight: bold;
   text-transform: uppercase;
-  font-family: "CustomFont", sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: var(--grey-1);
 }
 

@@ -102,10 +102,10 @@ export default function WorkIndex() {
                     className="card_content flex-1 flex py-2 column gap-4"
                   >
                     <div className="w-90 auto card_content_wrapper flex column gap-2">
-                      <h3 className="fs-30 text-grey family3 uppercase">{x.text}</h3>
+                      <h3 className="fs-30 text-grey">{x.text}</h3>
                       <h5
                         style={{ lineHeight: "1.4" }}
-                        className="fs-18 text-grey family3 text-light "
+                        className="fs-16 text-grey family3 text-light "
                       >
                         {x.description}
                       </h5>
@@ -114,7 +114,7 @@ export default function WorkIndex() {
                           return (
                             <div
                               style={{
-                                fontSize: "1.1rem",
+                                fontSize: "1.2rem",
                                 letterSpacing: "4px",
                               }}
                               className="fs-12 text-light text-grey family3 uppercase text-light"

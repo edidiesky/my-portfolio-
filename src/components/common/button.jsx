@@ -4,9 +4,7 @@ import styled from "styled-components";
 const Button = ({ text, subtext, type }) => {
   if (type === "tag") {
     return (
-      <ButtonWrapper
-        className={"fs-16 family3 tag"}
-      >
+      <ButtonWrapper className={"fs-16 family3 tag"}>
         <span className="text-1 text">{text}</span>
         <span className="text-2 text">{text}</span>
       </ButtonWrapper>
@@ -38,14 +36,13 @@ const ButtonWrapper = styled.button`
   &.tag {
     padding: 1rem 1.4rem;
     font-size: 8px;
-  border-radius: 40px;
-
+    border-radius: 40px;
   }
   &:is(:hover, :focus-visible)::before {
     bottom: -50%;
   }
   &:is(:hover, :focus-visible) .text-2 {
-    transform: translate(-50%, -200%);
+    top: 50%;
   }
   &:is(:hover, :focus-visible) .text-1 {
     transform: translateY(-100%);
@@ -68,7 +65,7 @@ const ButtonWrapper = styled.button`
   }
   .text-2 {
     position: absolute;
-    top: 100%;
+    top: -40%;
     left: 50%;
     transform: translateX(-50%);
     min-width: max-content;
@@ -85,7 +82,7 @@ const ButtonWrapper = styled.button`
     background-color: transparent;
   } */
     &:is(:hover, :focus-visible) .text-2 {
-      transform: translate(-50%, -220%);
+      top: 50%;
       z-index: 10;
       color: var(--dark-1);
     }

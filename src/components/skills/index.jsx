@@ -36,13 +36,14 @@ export default function SkillsIndex() {
                 {newskills.map((x, index) => {
                   return (
                     <div
-                      className="w-100 card family3 text-grey uppercase"
+                      className="w-100 cardw family3 text-grey uppercase"
                       key={index}
                       data-aos="fade-up"
                       data-aos-duration="1000"
                       data-aos-delay={index * 250}
                     >
                       {x}
+                      <div className="text-2">{x}</div>
                     </div>
                   );
                 })}
@@ -122,10 +123,10 @@ const SkillsWrapper = styled.div`
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 4rem;
     @media (max-width: 980px) {
-      grid-template-columns: repeat(auto-fit, minmax(auto, 1fr));
+      grid-template-columns: repeat(3,1fr);
     }
     @media (max-width: 580px) {
-      grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+      grid-template-columns: repeat(3,1fr);
       grid-gap: 2rem;
     }
   }
@@ -165,7 +166,7 @@ const SkillsWrapper = styled.div`
       filter: brightness(80%);
     }
   }
-  .card {
+  .cardw {
     position: relative;
     display: grid;
     place-items: center;
@@ -176,6 +177,39 @@ const SkillsWrapper = styled.div`
     border: 1px solid rgba(255, 255, 255, 0.3);
     font-size: 12px;
     z-index: 3000;
+    overflow: hidden;
+    transition: all 1s ease;
+    .text-2 {
+    position: absolute;
+    top: -10%;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: max-content;
+    color: #000;
+    transition: all 0.4s;
+  }
+    &:is(:hover, :focus-visible)::before {
+      bottom: -50%;
+    }
+    &:is(:hover, :focus-visible) .text-2 {
+      top: 50%;
+    }
+    &:is(:hover, :focus-visible) .text-1 {
+      transform: translateY(-100%);
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 200%;
+      height: 200%;
+      border-radius: 50%;
+      background-color: var(--grey-1);
+      transition: all 0.7s ease;
+      z-index: -1;
+    }
     @media (max-width: 780px) {
       width: 18rem;
       height: 18rem;

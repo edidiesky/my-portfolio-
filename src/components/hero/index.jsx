@@ -1,6 +1,20 @@
-import React from "react";
+import { Canvas, useFrame } from "@react-three/fiber";
+import { MeshWobbleMaterial, OrbitControls, useGLTF } from "@react-three/drei";
+import React, { useRef } from "react";
+import { BsGithub, BsTwitter } from "react-icons/bs";
+import { AiFillLinkedin } from "react-icons/ai";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
+import gsap from "gsap";
+import { useEffect } from "react";
+import SplitType from "split-type";
+
 export default function HeroIndex() {
+  // useEffect(() => {
+
+  // }, []);
+
+
   return (
     <WorkWrapper>
       <div className="w-85 auto">
@@ -15,22 +29,16 @@ export default function HeroIndex() {
             <div className="flex textwrapper w-100 hidden column">
               <div className="flex column">
                 <div className="hidden">
-                  <h2 className="text-grey text1 family3 uppercase hidden text-center">Making</h2>
+                  <h2 className="text-grey text1 hidden text-center">Making</h2>
                 </div>
                 <div className="hidden">
                   {" "}
-                  <h2 className="text-grey text1 family3 uppercase hidden text-center">
-                    <span className="text-secondary">good</span>
-                  </h2>
-                </div>{" "}
-                <div className="hidden">
-                  {" "}
-                  <h2 className="text-grey text1 family3 uppercase hidden text-center">
-                    <span className="text-secondary"> stuffs</span>
+                  <h2 className="text-grey text1 hidden text-center">
+                    <span className="text-secondary">good stuffs</span>
                   </h2>
                 </div>
                 <div className="hidden">
-                  <h2 className="text-grey text1 family3 uppercase hidden text-center">
+                  <h2 className="text-grey text1 hidden text-center">
                     a reality
                   </h2>
                 </div>
@@ -70,25 +78,23 @@ const WorkWrapper = styled.div`
     padding-top: 5rem;
   }
   h2 {
-    font-size: 12rem;
-    line-height: 110px;
+    font-size: 15rem;
+    line-height: 130px;
     font-weight: normal;
     width: 50%;
     margin: 0 auto;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     /* transition: all .5s; */
 
-    @media (max-width: 1180px) {
-      line-height: 110px;
-      width: 90%;
-    }
     @media (max-width: 980px) {
       line-height: 100px;
+      font-size: 14rem;
       width: 90%;
     }
 
     @media (max-width: 780px) {
       line-height: 100px;
+      font-size: 14rem;
     }
     @media (max-width: 590px) {
       line-height: 80px;
