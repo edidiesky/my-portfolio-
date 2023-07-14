@@ -3,15 +3,15 @@ import styled from "styled-components";
 
 const newskills = [
   "Reactjs",
-  "Tailwind css",
-  "Gsap",
-  "Expressjs",
-  "Nodejs",
-  "MongoDb",
   "Nextjs",
   "Typescriptjs",
-  "git",
+  "Expressjs",
+  "Nodejs",
   "Redux",
+  "git",
+  "Tailwind",
+  "Gsap",
+  "MongoDb",
 ];
 
 export default function SkillsIndex() {
@@ -21,7 +21,7 @@ export default function SkillsIndex() {
         <div className="flex w-100 flex column gap-1">
           <h4
             style={{ fontWeight: "normal", zIndex: 2000 }}
-            className="text-white family1 text-start flex item-center gap-2"
+            className="text-white family3 text-start flex item-center gap-2"
           >
             <img
               src="https://v2.brittanychiang.com/img/icons/settings.png"
@@ -36,7 +36,7 @@ export default function SkillsIndex() {
                 {newskills.map((x, index) => {
                   return (
                     <div
-                      className="w-100 card family1 text-grey uppercase"
+                      className="w-100 card family3 text-grey uppercase"
                       key={index}
                       data-aos="fade-up"
                       data-aos-duration="1000"
