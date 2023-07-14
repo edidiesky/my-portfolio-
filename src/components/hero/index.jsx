@@ -94,16 +94,16 @@ const WorkWrapper = styled.div`
 
     @media (max-width: 780px) {
       line-height: 100px;
-      font-size: 14rem;
+      font-size: 120px;
     }
     @media (max-width: 590px) {
       line-height: 80px;
-      font-size: 11rem;
+      font-size: 110px;
       width: 90%;
     }
     @media (max-width: 390px) {
       line-height: 70px;
-      font-size: 9.8rem;
+      font-size: 100px;
       width: 100%;
       font-weight: normal;
     }

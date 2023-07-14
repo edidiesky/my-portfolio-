@@ -105,6 +105,9 @@ const SkillsWrapper = styled.div`
       font-size: 70px;
       /* font-weight: bold; */
     }
+    @media (max-width: 380px) {
+      font-size: 55px;
+    }
   }
 
   .icon1 {

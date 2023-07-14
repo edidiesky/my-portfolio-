@@ -21,7 +21,7 @@ export default function MottoIndex() {
                   data-aos-duration="900"
                   className="text-grey Mottotext hidden text-center"
                 >
-                 RELIABLE CODE
+                  RELIABLE CODE
                 </h2>
               </div>
               <div className="hidden">
@@ -48,14 +48,19 @@ const WorkWrapper = styled.div`
 
   width: 100%;
   padding: 10rem 0;
-  min-height: 100vh;
+
   display: grid;
   place-items: center;
   .hidden {
     overflow: hidden;
   }
-  @media (max-width: 780px) {
+  @media (min-width: 1080px) {
     padding: 5rem 0;
+    padding: 10rem 0;
+    min-height: 100vh;
+  }
+  @media (max-width: 780px) {
+    padding: 10rem 0;
   }
   .imageWrapper {
     position: absolute;

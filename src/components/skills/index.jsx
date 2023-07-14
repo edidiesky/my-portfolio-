@@ -128,6 +128,9 @@ const SkillsWrapper = styled.div`
     @media (max-width: 580px) {
       grid-template-columns: repeat(3,1fr);
       grid-gap: 2rem;
+    } @media (max-width: 480px) {
+      grid-template-columns: repeat(2,1fr);
+      grid-gap: 2rem;
     }
   }
   .text {

@@ -67,7 +67,7 @@ const workdata = [
 
 export default function WorkIndex() {
   return (
-    <SkillsWrapper id="Work">
+    <SkillsWrapper id="work">
       <div className="left w-85 auto h-100 flex column gap-3">
         <div className="w-100">
           <h4

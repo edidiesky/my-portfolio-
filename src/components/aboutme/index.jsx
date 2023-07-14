@@ -75,6 +75,10 @@ const SkillsWrapper = styled.div`
     } @media (max-width: 480px) {
       font-size: 40px;
     }
+    @media (max-width: 380px) {
+      font-size: 36px;
+    }
+    
   }
 
   .text1,

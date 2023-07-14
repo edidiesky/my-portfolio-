@@ -5,7 +5,7 @@ export default function Footer() {
   const FooterLeft = () => {
     return (
       <div className="left w-90 auto h-100 flex column gap-4">
-        <div className="flex item-center w-85 auto">
+        <div className="flex top item-center w-85 auto">
           <div className="w-100 flex column gap-2">
             <h2 className="text-grey w-100 family1 fs-45">
               Let's start a project together
@@ -69,7 +69,10 @@ export default function Footer() {
               </div>
             </div>{" "}
             {/* message */}
-            <div style={{borderBottom:"2px solid rgba(255, 255, 255, 0.1)"}} className="form w-100 flex item-start gap-2">
+            <div
+              style={{ borderBottom: "2px solid rgba(255, 255, 255, 0.1)" }}
+              className="form w-100 flex item-start gap-2"
+            >
               <div className="flex">
                 <h4>04</h4>
               </div>
@@ -119,7 +122,7 @@ export default function Footer() {
   };
 
   return (
-    <FooterWrapper id="Footer">
+    <FooterWrapper id="contact">
       <FooterLeft />
     </FooterWrapper>
   );
@@ -139,8 +142,8 @@ const FooterWrapper = styled.div`
     grid-template-columns: 1fr 10vw;
     grid-gap: 5rem;
     @media (max-width: 780px) {
-    grid-template-columns: 1fr;
-  }
+      grid-template-columns: 1fr;
+    }
   }
   @media (max-width: 780px) {
     font-size: 14px;
@@ -150,6 +153,18 @@ const FooterWrapper = styled.div`
     padding: 4rem 0;
     &:last-child {
       border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    }
+  }
+  .top {
+    @media (max-width: 480px) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 2rem;
+    }
+  }
+  h3 {
+    @media (max-width: 780px) {
+      font-size: 20px;
     }
   }
   input {
@@ -163,6 +178,9 @@ const FooterWrapper = styled.div`
     font-weight: 400;
     transition: all 0.6s;
     color: #fff;
+    @media (max-width: 480px) {
+      font-size: 16px;
+    }
   }
   textarea {
     height: 15rem;
@@ -204,7 +222,6 @@ const FooterWrapper = styled.div`
       min-width: max-content;
       color: #000;
       transition: all 0.7s ease;
-
     }
     .text-1 {
       position: absolute;
@@ -234,14 +251,20 @@ const FooterWrapper = styled.div`
       width: 200%;
       height: 200%;
       border-radius: 50%;
-      background-color: rgba(168, 151, 123, 0.913);
+      background-color: rgba(168, 151, 123, 0.228);
       transition: all 0.7s ease;
       z-index: -1;
+      padding: 2rem;
     }
     @media (max-width: 780px) {
       font-size: 19px;
       bottom: -5%;
       right: -20%;
+    }
+    @media (max-width: 380px) {
+      width: 100px;
+      font-size: 14px;
+      height: 100px;
     }
   }
   .image {
@@ -254,8 +277,8 @@ const FooterWrapper = styled.div`
     font-size: 70px;
     position: relative;
     @media (max-width: 980px) {
-    font-size: 45px;
-  }
+      font-size: 45px;
+    }
     .span {
       position: absolute;
       bottom: -100%;
