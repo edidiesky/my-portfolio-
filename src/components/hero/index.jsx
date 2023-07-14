@@ -15,22 +15,22 @@ export default function HeroIndex() {
             <div className="flex textwrapper w-100 hidden column">
               <div className="flex column">
                 <div className="hidden">
-                  <h2 className="text-grey text1 hidden text-center">Making</h2>
+                  <h2 className="text-grey text1 family3 uppercase hidden text-center">Making</h2>
                 </div>
                 <div className="hidden">
                   {" "}
-                  <h2 className="text-grey text1 hidden text-center">
+                  <h2 className="text-grey text1 family3 uppercase hidden text-center">
                     <span className="text-secondary">good</span>
                   </h2>
                 </div>{" "}
                 <div className="hidden">
                   {" "}
-                  <h2 className="text-grey text1 hidden text-center">
+                  <h2 className="text-grey text1 family3 uppercase hidden text-center">
                     <span className="text-secondary"> stuffs</span>
                   </h2>
                 </div>
                 <div className="hidden">
-                  <h2 className="text-grey text1 hidden text-center">
+                  <h2 className="text-grey text1 family3 uppercase hidden text-center">
                     a reality
                   </h2>
                 </div>
@@ -70,27 +70,25 @@ const WorkWrapper = styled.div`
     padding-top: 5rem;
   }
   h2 {
-    font-size: 15rem;
-    line-height: 130px;
+    font-size: 12rem;
+    line-height: 110px;
     font-weight: normal;
     width: 50%;
     margin: 0 auto;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     /* transition: all .5s; */
 
-    @media (max-width: 1190px) {
-      line-height: 120px;
-      font-size: 14rem;
+    @media (max-width: 1180px) {
+      line-height: 110px;
       width: 90%;
-    } @media (max-width: 980px) {
+    }
+    @media (max-width: 980px) {
       line-height: 100px;
-      font-size: 14rem;
       width: 90%;
     }
 
     @media (max-width: 780px) {
       line-height: 100px;
-      font-size: 14rem;
     }
     @media (max-width: 590px) {
       line-height: 80px;

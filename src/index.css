@@ -62,8 +62,8 @@ body {
 
 @font-face {
   font-family: 'CustomFont';
-  src: url('./assets/custom.woff') format('woff'),
-       url('./assets/custom_2.woff') format('woff');
+  src: 
+       url('./assets/custom-3.woff') format('woff');
 }
 
 

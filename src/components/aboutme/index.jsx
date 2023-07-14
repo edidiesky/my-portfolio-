@@ -68,13 +68,10 @@ const SkillsWrapper = styled.div`
 
   h2 {
     font-size: 56px;
-    line-height: 1.1;
-    font-weight: 700;
+    line-height: 1;
+    font-weight: 900;
     @media (max-width: 980px) {
-      font-size: 4.8rem;
-    }
-    @media (max-width: 380px) {
-      font-size: 4rem;
+      font-size: 50px;
     }
   }
 

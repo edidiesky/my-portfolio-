@@ -36,7 +36,7 @@ export default function AboutIndex() {
                     data-aos="fade-up"
                     data-aos-duration="1000"
                     data-aos-delay={index * 250}
-                    className="text-grey w-100 uppercase text-start"
+                    className="text-grey w-100 uppercase family3 text-start"
                   >
                     <TextIndex x={x} />
                   </h2>
@@ -90,7 +90,7 @@ const SkillsWrapper = styled.div`
   h2 {
     letter-spacing: 1px;
     font-weight: normal;
-    font-size: 100px;
+    font-size: 90px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     padding: 0;
 
@@ -99,7 +99,7 @@ const SkillsWrapper = styled.div`
       /* font-weight: bold; */
     }
     @media (max-width: 580px) {
-      font-size: 6rem;
+      font-size: 7rem;
       /* font-weight: bold; */
     }
   }

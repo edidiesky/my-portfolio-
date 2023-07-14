@@ -19,7 +19,7 @@ export default function MottoIndex() {
                 <h2
                   data-aos="fade-up"
                   data-aos-duration="900"
-                  className="text-grey Mottotext hidden text-center"
+                  className="text-grey Mottotext family3 hidden text-center"
                 >
                  RELIABLE CODE
                 </h2>
@@ -29,7 +29,7 @@ export default function MottoIndex() {
                   data-aos="fade-up"
                   data-aos-duration="1200"
                   data-aos-delay={"250"}
-                  className="text-secondary Mottotext hidden text-center"
+                  className="text-secondary Mottotext family3 hidden text-center"
                 >
                   IS HONESTY
                 </h2>
@@ -84,7 +84,7 @@ const WorkWrapper = styled.div`
     padding-top: 5rem;
   }
   h2 {
-    font-size: 14rem;
+    font-size: 10rem;
     line-height: 120px;
     font-weight: 400;
     width: 90%;
